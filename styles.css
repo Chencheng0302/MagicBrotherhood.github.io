@@ -103,6 +103,7 @@ p {
 }
 #donate {
   background-color: #2f2f2f;
+	padding-left: 50px;
 }
 #donate img{
 	margin-left: 50px;
@@ -229,15 +230,6 @@ body {
 	margin: 0 auto;
 	padding: 100px 0;
 }
-
-
-
-
 .skins {
 	align-content: center;
 }
-
-
-
-
-
