@@ -1,22 +1,23 @@
 #header {
-  background-color: #1abc9c;
-  height: 70px;
-  line-height: 40px;
-	padding-top: 13px;
-	padding-bottom: 20px
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
 }
-#header-title {
-  display: block;
-  float: left;
-  font-size: 40px;
-  font-weight: bold;
-  margin-left: 60px;
+#header ul{
+	background-color: #1abc9c;
+	margin: 0;
+	padding: 0.3em;
+	overflow: hidden;
 }
+#header li {
+	padding-left: 1.5em
+}
+
 #header-nav {
   display: block;
   float: right;
   margin-top: 0;
-  margin-right: 20px;
+  margin-right: 1em;
 }
 #header li {
   display: inline;
@@ -60,25 +61,14 @@ a {
 a:hover {
   color: #F6A623;
 }
-.post, .about {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 60px 0;
+.post {
+  width: 74%;
+	display: inline-block;
 }
 .post-author img {
   width: 50px;
   height: 50px;
   vertical-align: middle;
-}
-.post-author span {
-  margin-left: 16px;
-}
-.post-date {
-  color: #D2D2D2;
-  font-size: 14px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
 }
 h1, h2, h3, h4 {
   color: #333;
@@ -108,10 +98,8 @@ p {
 #donate img{
 	margin-left: 50px;
 }
-
 #special {
 	background-color:#2f2f2f;
-	height: 
 }
 .intro {
 	background-color: lightslategray;
@@ -153,21 +141,19 @@ p {
 	margin-left: 40px;
 }
 .lks {
-	position: relative;
-	max-width: 1300px;
+	width: 100%;
+	overflow-x: hidden;
 }
 body {
 	margin: 0;
 }
 .display-index img{
 	border-radius: 50%;
-	margin-left: 10px;
+	margin-left: 1.1em;
 }
-
-
-
 .display-index {
-	margin-top: 10px;
+	margin-top: 0.2em;
+
 }
 .display-index-images {
 	opacity: 1.0;
@@ -189,16 +175,11 @@ body {
 	border-color: white;
 	border-width: 5px;
 }
-
 .guide-line {
-	margin-left: 60px;
-	font-size: 25px;
+	font-size: 2em;
+	font-weight: bold;
 }
 
-.teamsname {
-	margin-left: 60px;
-	font-size: 35px;
-}
 .about-author {
 	display: inline;
 }
@@ -220,9 +201,9 @@ body {
 
 .info-presentation {
 	text-align: left;
-	font-size: 20px;
+	font-size: 1.5em;
 	font-family: Cambria, Hoefler Text, Liberation Serif, Times, Times New Roman, serif;
-	text-indent: 1cm;
+	text-indent: 2em;
 }
 
 .info-about {
@@ -232,4 +213,83 @@ body {
 }
 .skins {
 	align-content: center;
+}
+.left-menu {
+	display: inline-block;
+	width: 25%;
+	background-color: #f1f1f1;
+	vertical-align: top;
+}
+.left-menu ul{
+	list-style-type: none;
+}
+.left-menu a{
+	display: block;
+}
+#content a {
+	text-decoration: none;
+}
+
+.info-images {
+	border-radius: 50%;
+	display: block;
+	margin: auto;
+}
+
+.index-list {
+	font-size: 1.3em;
+	font-family: Tahoma;
+}
+.left-menu li a{
+	display: block;
+	padding: 0.1em 0.1em 0.1em;
+	margin-left: 0.8em;
+	color: black;
+}
+.left-menu li a:hover {
+	display: block;
+	background-color: #555;
+	color: white;
+}
+.first-letter {
+	font-size: 2.5em;
+	color: gray;
+}
+
+.magicname {
+	text-align: center;
+}
+.post-speical {
+	padding-top: 0;
+}
+#404-content {
+	width: 80%;
+}
+#404-content p{
+	text-align: center;
+}
+
+.special-404-title {
+	text-align: center;
+	font-size: 2.5em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.fa-warning {
+	margin-top: 1em;
+}
+#fourzerofourcontent {
+	text-align: center;
+}
+
+.fourpresentation {
+	font-family: Baskerville, Palatino Linotype, Palatino, Century Schoolbook L, Times New Roman, serif;
+	font-size: 1.5em;
+	line-height: 2;
+}
+
+.fourzerofourimages {
+	width: 25em;
+	border-radius: 50%;
+	margin-top: 2em;
 }
