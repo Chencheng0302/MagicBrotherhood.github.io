@@ -6,27 +6,15 @@
 #header ul{
 	background-color: #1abc9c;
 	margin: 0;
-	padding: 0.3em;
+	padding: 0.2em;
 	overflow: hidden;
 }
 #header li {
-	padding-left: 1.5em
+	padding-left: 3%;
+	display: inline;
 }
 
-#header-nav {
-  display: block;
-  float: right;
-  margin-top: 0;
-  margin-right: 1em;
-}
-#header li {
-  display: inline;
-  padding-left: 40px;
-}
-.container {
-  max-width: 1000px;
-	margin: auto;
-}
+
 #header a {
   color: white;
   text-decoration: none;
@@ -38,13 +26,13 @@
 }
 #footer {
   background-color: #2f2f2f;
-  padding:20px 0;
+  padding: 0.5em 0;
 }
 .column {
-  min-width:  width: 300px;
+  min-width: 15em;
   display: inline-block;
   vertical-align: top;
-  margin-left: 20px;
+  margin-left: 2em;
 }
 #footer h4 {
   color: white;
@@ -82,60 +70,53 @@ p {
 .post-author img, .about-author img {
   border-radius: 50%;
 }
-
-#donate img{
-  max-width: 450px;
-  max-height: 450px;
-  margin-left: 75px;
-  margin-top: 75px;
-  margin-bottom: 75px;
-  display: inline;
-}
 #donate {
-  background-color: #2f2f2f;
-	padding-left: 50px;
+  background-color: #CCCCCC;
+	width: 100%;
+	display: block;
+	margin: auto;
+	padding-top: 5%;
+	padding-bottom: 5%;
 }
-#donate img{
-	margin-left: 50px;
-}
+
 #special {
 	background-color:#2f2f2f;
 }
 .intro {
-	background-color: lightslategray;
+	background-color: #CCCCCC;
+	width: 80%;
+	margin: auto;
+	border-style: outset;
 }
 
 .profile {
 	border-radius: 75%;
-	position: relative;
-	left: 300px;
+	display: block;
+	margin: auto;
 }
 
 .olddog {
-	padding-top: 0px;
+	padding-top: 0em;
 }
 
 .top {
 	text-align: center;
-	margin: 10px 0 10px 0;
-	font-size: 40px;
+	margin: 5% 0 5% 0 0;
+	font-size: 2.5em;
+	width: 100%;
 	font-family: STKaiti,"华为楷体"，sans-seri;
 }
 
 .head-description {
-	margin-left: 30px;
+	margin-left: 1.875em;
 }
 
 .description-details {
 	text-align: center;
-	font-family: arial;
-	font-size: 18px;
+	font-family: arial h;
+	font-size: 130%;
+	width: 100%;
 }
-
-.display img{
-	margin: 0px 15px 5px 15px;
-}
-
 .details {
 	color: aliceblue;
 	margin-left: 40px;
@@ -149,25 +130,31 @@ body {
 }
 .display-index img{
 	border-radius: 50%;
-	margin-left: 1.1em;
+	margin-left: 1%;
 }
 .display-index {
-	margin-top: 0.2em;
-
+	text-align: center;
+	margin-top: 1%;
 }
 .display-index-images {
 	opacity: 1.0;
+	transition-property: all;
+	transition-duration: 2s;
+	-webkit-transition-property: all;
+	-webkit-transition-duration: 1s;
 	filter: alpha(opacity=100);
 }
 .display-index-images:hover {
-	opacity: 0.3;
+	opacity: 0.2;
 	filter: alpha(opacity=30);
 }
 
 .presentation {
 	text-align: center;
-	font-size: 20px;
+	font-size: 150%;
 	font-family: Cambria, Hoefler Text, Liberation Serif, Times, Times New Roman, serif;
+	margin-top: 5%;
+	margin-bottom: 10%;
 }
 
 .display img{
@@ -176,8 +163,12 @@ body {
 	border-width: 5px;
 }
 .guide-line {
-	font-size: 2em;
+	font-size: 150%;
 	font-weight: bold;
+	display: block;
+}
+.guide-line li {
+	float: left;
 }
 
 .about-author {
@@ -193,32 +184,32 @@ body {
 }
 
 .special-about-title {
-	text-align: left;
-	font-size: 45px;
 	color:lightslategray;
-	margin-left: 20px;
+	margin-left: 10%;
+	font-size: 300%;
 }
 
 .info-presentation {
-	text-align: left;
-	font-size: 1.5em;
+	margin-left: 15%;
+	padding: 2% 0 2% 2%;
+	font-size: 200%;
 	font-family: Cambria, Hoefler Text, Liberation Serif, Times, Times New Roman, serif;
-	text-indent: 2em;
+	text-indent: 2%;
+}
+.info-presentation li {
+	margin: 2% 0 2% 0;
 }
 
-.info-about {
-	max-width: 1000px;
-	margin: 0 auto;
-	padding: 100px 0;
-}
-.skins {
-	align-content: center;
-}
+
 .left-menu {
 	display: inline-block;
 	width: 25%;
 	background-color: #f1f1f1;
 	vertical-align: top;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.left-menu:hover {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 .left-menu ul{
 	list-style-type: none;
@@ -230,26 +221,33 @@ body {
 	text-decoration: none;
 }
 
-.info-images {
-	border-radius: 50%;
-	display: block;
-	margin: auto;
-}
 
 .index-list {
-	font-size: 1.3em;
+	font-size: 200%;
 	font-family: Tahoma;
+	padding-top: 0.5em;
 }
 .left-menu li a{
 	display: block;
 	padding: 0.1em 0.1em 0.1em;
-	margin-left: 0.8em;
+	margin-left: 5%;
 	color: black;
+}
+.left-menu li a:link {
+	display: block;
+	color: black;
+}
+.left-munu li a:visited {
+	display: block;
+	background-color: #555;
+	color: white;
+	font-size: 120%;
 }
 .left-menu li a:hover {
 	display: block;
 	background-color: #555;
 	color: white;
+	font-size: 115%;
 }
 .first-letter {
 	font-size: 2.5em;
@@ -271,9 +269,9 @@ body {
 
 .special-404-title {
 	text-align: center;
-	font-size: 2.5em;
-	margin-top: 1em;
-	margin-bottom: 1em;
+	font-size: 300%;
+	margin-top: 2%;
+	margin-bottom: 2%;
 }
 .fa-warning {
 	margin-top: 1em;
@@ -284,12 +282,242 @@ body {
 
 .fourpresentation {
 	font-family: Baskerville, Palatino Linotype, Palatino, Century Schoolbook L, Times New Roman, serif;
-	font-size: 1.5em;
+	font-size: 170%;
 	line-height: 2;
 }
 
 .fourzerofourimages {
-	width: 25em;
+	width: 35%;
 	border-radius: 50%;
-	margin-top: 2em;
+	margin-top: 2%;
+}
+
+.dropbtn {
+	display: inline-block;
+}
+
+.dropdown {
+	display: inline-block;
+	padding-left: 3%;
+	overflow: hidden;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	min-width: 4em;
+	box-shadow: 0em 0em 1em 0em rgba(0,0,0,0.2);
+	background-color: #1abc9c;
+	margin-left: 1.7em;
+	margin-top: 0.1em;
+	padding-left: 1em;
+	font-size: 0.7em;
+	padding-right: 0.5em;
+}
+.dropdown-content a {
+	color: white;
+	padding: 0.5em 0em 0.5em 0em;
+	display: block;
+}
+.dropdown-content a:hover {
+	color: black;
+}
+.dropdown:hover .dropdown-content{
+	display: block;
+}
+
+.search {
+	
+}
+
+.members-post {
+	  width: 100%;
+	display: inline-block;
+}
+
+.files {
+	width: 100%;
+	background-color: #1abc9c;
+	font-size: 150%;
+}
+
+.uniquefile {
+	width: 80%;
+	margin: 0;
+	margin-left: 10%;
+	margin-top: 1em;
+}
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 80%;
+  height: auto;
+	border-radius: 50%;
+	margin: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 80%;
+	margin: auto;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #1abc9c;
+	border-radius: 50%;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 200%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+input[type=text] {
+    width: 60%;
+    box-sizing: border-box;
+    border: 1px solid white;
+    border-radius: 25px;
+    font-size: 75%;
+	background: url(images/search_24px_504760_easyicon.net.png);
+	background-position: 5% 0%;
+    background-color: white; 
+    background-repeat: no-repeat;
+    padding: 1% 5% 1% 15%;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+.formserch input[type=text] {
+	margin-left: 30%;
+}
+input[type=text]:focus {
+    width: 100%;
+}
+.formserch {
+	display: inline-block;
+}
+@media screen and (max-width: 600px) {
+	#page{ width: 450px; }.left-menu{width: 100%}.iframeindex{width: 100%}
+   .guide-line, .formserch input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    margin: 0;
+    padding: 14px;
+  }
+	#donate {
+		display: none;
+	}
+	#header {
+		position: static;
+	}
+		.display-index img{
+		width: 25%;
+	}
+	#header li {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+	}
+	.head-nav {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	.left-menu .warning {
+		display: block;
+	}
+	.donateitem .warning {
+		display: block;
+	}
+	.formserch {
+		display: none;
+	}
+}
+
+.info {
+    background-color: #e7f3fe;
+    border-left: 6px solid #2196F3;
+	font-size: 100%;
+	font-size: 120%;
+}
+.warning {
+	display: none;
+    background-color: #ffffcc;
+    border-left: 6px solid #ffeb3b;
+	font-size: 100%;
+	font-size: 120%;
+}
+.display img{
+	display: inline-block;
+	margin: 2% 2% 2% 2%;
+}
+.linkcontainer {
+	width: 90%;
+	display: block;
+	margin: auto;
+}
+
+.info-about-author {
+	width: 100%;
+	display: block;
+	margin: auto;
+}
+
+.elcskins {
+	border-radius: 50%;
+}
+
+.info-about {
+	margin-top: 2%;
+}
+
+.description {
+	margin-left: 5%;
+	font-size: 180%;
+	text-indent: 5%;
+	font-family: Cambria, Hoefler Text, Liberation Serif, Times, Times New Roman, serif;
+}
+.donatecode {
+	width: 90%;
+	display: block;
+	margin: auto;
+}
+#public {
+	width: 100%;
+	margin: auto;
+	background-color: white;
+}
+
+.publiccontainer {
+	width: 90%;
+	margin: auto;
+	background-color: #D8D6D8;
+}
+
+.block {
+	
+}
+
+.donateimg {
+	width: 28%;
+	height: 28em;
+	margin: 0 2% 0 2%;
+	border: outset;
 }

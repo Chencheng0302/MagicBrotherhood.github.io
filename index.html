@@ -4,16 +4,42 @@
   <title>Magic</title>
   <link rel="stylesheet"
   type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="css/loader.css">
 <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 	body {
 		margin: 0;
 	}
 	</style>
+	<script type="text/javascript">
+		function load() {
+      var a= setTimeout("loading.style.transition='opacity 1s'",0)   
+      //设置透明度改变的过渡时间为0.3秒
+      var b= setTimeout("loading.style.opacity=0",500)
+      //0.5秒后加载动画开始变为透明
+      var c= setTimeout("loading.style.display='none'",800)
+      //当透明度为0的时候，隐藏掉它
+}
+	</script>
 </head>
-<body>
+<body onLoad="load()">
+ 	<div id="loading">
+		<div id="loading-center">
+			<div id="loading-center-absolute">
+				<div class="object" id="object_one"></div>
+				<div class="object" id="object_two"></div>
+				<div class="object" id="object_three"></div>
+				<div class="object" id="object_four"></div>
+				<div class="object" id="object_five"></div>
+				<div class="object" id="object_six"></div>
+				<div class="object" id="object_seven"></div>
+				<div class="object" id="object_eight"></div>
+				<div class="object" id="object_big"></div>
+			</div>
+		</div>
+	</div>
   <div id="header">
     <div class="post-container">
       <ul class="guide-line">
@@ -21,78 +47,55 @@
         <li><a href="links.html"><i class="fa fa-link"></i>友情链接</a></li>
         <li><a href="about.html"><i class="fa fa-info"></i>关于我们</a></li>
         <li><a href="not_found.html"><i class="fa fa-pencil-square-o"></i>留言板</a></li>
-        <li><a href="not_found.html"><i class="fa fa-area-chart"></i>更多</a></li>
-        <li><a id="header-nav"
+       <form class="formserch">
+       	<input type="text" name="search" placeholder="搜索...">
+       </form>
+        <li  style="float: right;margin-right: 2%;display: inline-block;margin-top: 0;"><a 
         href="mailto:907605461@qq.com?subject=Chencheng%20I%20Love%20You&body=I%20miss%20you%20for%20a%20
-        long%20time,%20I%20want%20to%20see%20you!"><i class="fa fa-envelope-o"></i> 联系作者</a></li>
+        long%20time,%20I%20want%20to%20see%20you!"><i class="fa fa-envelope-o"></i>联系作者</a></li>
       </ul>
     </div>
       </div>
-    <div id="content">
+    <div id="contents">
       <div class="post-container">
         <div class="post-speical">
           <img src="images/lks.png" alt="" class="lks">
         </div>
       </div>
     </div>
+    <div class="info">
+  <p><strong>公告： </strong>部分功能暂未上线</p>
+</div>
     <div id="content">
       <div class="left-menu">
          		<br><br><br>
-          		<img src="images/qqphotos/IMG_4081(20180905-143824).jpg" alt="Magic_Brotherhood" width="250em" class="info-images">
-          		<h2 class="magicname">Magic丶Brotherhood</h2>
+				<div class="container">
+  <img src="images/groupimage.JPG" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Magic Brotherhood</div>
+  </div>
+		  </div>
+          		<h2 class="magicname"></h2>
           		<ul>
-          			<li class="index-list"><a><i class="fa fa-group"></i> 成员</a></li>
-          			<li class="index-list"><a href="not_found.html"><i class="fa fa-folder-open"></i> 文件</a></li>
-          			<li class="index-list"><a href="not_found.html"><i class="fa fa-image"></i> 相册</a></li>
+          			<li class="index-list"><a href="members.html" target="membersiframe"><i class="fa fa-group"></i> 成员</a></li>
+          			<li class="index-list"><a href="files.html" target="membersiframe"><i class="fa fa-folder-open"></i> 文件</a></li>
+          			<li class="index-list"><a href="album.html" target="membersiframe"><i class="fa fa-image"></i> 相册</a></li>
+          			<li class="index-list"><a href="display.html" target="membersiframe"><i class="fa fa-bar-chart"></i> 展览</a></li>
+          			<li class="index-list"><a href="public.html" target="membersiframe"><i class="fa fa-newspaper-o"></i> 公告栏</a></li>
+          			<li class="index-list"><a href="designs.html" target="membersiframe"><i class="fa fa-paper-plane"></i> 作品集</a></li>
+          			<li class="index-list"><a href="baidumap.html" target="membersiframe"><i class="fa fa-comment"></i> 反馈建议</a></li>
           		</ul>
+          		<div class="warning">
+          			<p><strong>注意!</strong> 检测到您的设备是手机，故菜单栏链接所指页面会显示在下方的iframe中。</p>
+          		</div>
           </div>
-        <div class="post">
-          <div class="display-index">
-          <h3 style="font-family: allura;"><span class="fa fa-group fa-2x"></span> 成员   Memembers</h3>
-          <hr>
-			  <a target="_blank" href="information.html"><img src="images/qqimages/IMG_3793.JPG" alt="" width="100em" class="display-index-images"></a>
-          	  <a target="_blank" href="information.html"><img src="images/qqimages/IMG_3907.JPG" alt="" width="100em" class="display-index-images"></a>
-			  <a target="_blank" href="happy_wangbi.html"><img src="images/qqimages/wangbi.JPG" alt="" width="100em" class="display-index-images"></a>
-          	  <a target="_blank" href="zhangrui.html"><img src="images/qqimages/IMG_4040.JPG" alt="" width="100em" class="display-index-images"></a>
-          	  <a target="_blank" href="happy_olddog.html"><img src="images/qqimage.JPG" alt="" width="100em" class="display-index-images"></a>
-          	  <a target="_blank" href="mangzi.html"><img src="images/qqimages/IMG_4059.JPG" alt="" width="100em" class="display-index-images"></a>
-          	  <a target="_blank" href="libo.html"><img src="images/qqimages/IMG_4047.JPG" alt="" width="100em" class="display-index-images"></a>
-			</div>
-         <div class="display-index">
-          <a target="_blank" href="yuanlunshao.html"><img src="images/qqimages/IMG_4046.JPG" alt="" width="100em" class="display-index-images"></a>
-          <a target="_blank" href="xxiaoyi.html"><img src="images/qqimages/IMG_4041.JPG" alt="" width="100em" class="display-index-images"></a>
-		  <a target="_blank" href="zhouzeyao.html"><img src="images/qqimages/IMG_4045.JPG" alt="" width="100em" class="display-index-images"></a>
-          <a target="_blank" href="wuyu.html"><img src="images/qqimages/IMG_4055.JPG" alt="" width="100em" class="display-index-images"></a>
-          <a target="_blank" href="wangxilou.html"><img src="images/qqimages/IMG_4057.JPG" alt="" width="100em" class="display-index-images"></a>
-          <a target="_blank" href="hejiafu.html"><img src="images/qqimages/IMG_4056.JPG" alt="" width="100em" class="display-index-images"></a>
-          <a target="_blank" href="chenlinggong.html"><img src="images/qqimages/IMG_4042.JPG" alt="" width="100em" class="display-index-images"></a>
-			</div>
-         <div class="display-index">
-          <a target="_blank" href="laobao.html"><img src="images/qqimages/IMG_4043.JPG" alt="" width="100em" class="display-index-images"></a>
-          <a target="_blank" href="baoqiang.html"><img src="images/qqimages/IMG_4058.JPG" alt="" width="100em" class="display-index-images"></a>
-		  <a target="_blank" href="zhirun.html"><img src="images/qqimages/IMG_4052.JPG" alt="" width="100em" class="display-index-images"></a>
-          <a target="_blank" href="chenlu.html"><img src="images/qqimages/IMG_4050.JPG" alt="" width="100em" class="display-index-images"></a>
-          <a target="_blank" href="bichangfeng.html"><img src="images/qqimages/IMG_4048.JPG" alt="" width="100em" class="display-index-images"></a>
-          <a target="_blank" href="laowen.html"><img src="images/qqimages/IMG_4049.JPG" alt="" width="100em" class="display-index-images"></a>
-          <a target="_blank" href="yangtuo.html"><img src="images/qqimages/IMG_4054.JPG" alt="" width="100em" class="display-index-images"></a>
-			</div>
-         <div class="display-index">
-           <a target="_blank" href="hubo.html"><img src="images/qqimages/IMG_4053.JPG" alt="" width="100em" class="display-index-images"></a>
-           <a target="_blank" href="xiaojinwang.html"><img src="images/qqimages/yinghuozhisen.gif" alt="" width="100em"  height="100em" class="display-index-images"></a>
-           <a target="_blank" href="laosegou.html"><img src="images/qqimages/IMG_4060.JPG" alt="" width="100em" class="display-index-images"></a>
-           <a target="_blank" href="heilaowa.html"><img src="images/qqimages/IMG_4077.JPG" alt="" width="100em" class="display-index-images"></a>
-           <a target="_blank" href="tanhongzhang.html"><img src="images/qqimages/IMG_4124.JPG" alt="" width="100em" class="display-index-images"></a>
-			</div>
-        <br><br><br>
-        <br><br><br><br><br>
-          </div>
+		<iframe src="members.html" width="74%" height="800" frameborder="0" name="membersiframe" class="iframeindex"></iframe>
         </div>
-      </div>
        <div class="presentation">
          <p>妙语连珠是猎物，吞吞吐吐是喜欢</p>
          <p>喜欢以前的自己，更期待以后的自己</p>
-         	<p>何与君相识，无言泪千行</p>
-         </div>
+         <p>何与君相识，无言泪千行&nbsp;</p>
+       </div>
          <br><br><br>
       <div id="footer">
         <div class="post-container">
