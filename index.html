@@ -15,12 +15,13 @@
 	</style>
 	<script type="text/javascript">
 		function load() {
-      var a= setTimeout("loading.style.transition='opacity 1s'",0)   
+      var a= setTimeout("loading.style.transition='opacity 1s'",0)
       //设置透明度改变的过渡时间为0.3秒
       var b= setTimeout("loading.style.opacity=0",500)
       //0.5秒后加载动画开始变为透明
       var c= setTimeout("loading.style.display='none'",800)
       //当透明度为0的时候，隐藏掉它
+
 }
 	</script>
 </head>
@@ -47,10 +48,11 @@
         <li><a href="links.html"><i class="fa fa-link"></i>友情链接</a></li>
         <li><a href="about.html"><i class="fa fa-info"></i>关于我们</a></li>
         <li><a href="not_found.html"><i class="fa fa-pencil-square-o"></i>留言板</a></li>
+        <li><a href="more.html"><i class="fa fa-spinner"></i>更多</a></li>
        <form class="formserch">
        	<input type="text" name="search" placeholder="搜索...">
        </form>
-        <li  style="float: right;margin-right: 2%;display: inline-block;margin-top: 0;"><a 
+        <li  style="float: right;margin-right: 2%;display: inline-block;margin-top: 0;"><a
         href="mailto:907605461@qq.com?subject=Chencheng%20I%20Love%20You&body=I%20miss%20you%20for%20a%20
         long%20time,%20I%20want%20to%20see%20you!"><i class="fa fa-envelope-o"></i>联系作者</a></li>
       </ul>
@@ -69,7 +71,7 @@
     <div id="content">
       <div class="left-menu">
          		<br><br><br>
-				<div class="container">
+				<div class="newcontainer">
   <img src="images/qqimages/groupimage.JPG" alt="Avatar" class="image">
   <div class="overlay">
     <div class="text">Magic Brotherhood</div>
@@ -77,6 +79,23 @@
 		  </div>
           		<h2 class="magicname"></h2>
           		<ul>
+          			<li><p id="greeting"></p></li>
+          			         		<script>
+		  			function dailyTalk(){
+			var someTime="";
+			var time = new Date().getHours();
+			if (time>=6 && time<11){
+				someTime="早上好！";
+			}
+			else if (time>=11 && time<=14){
+				someTime="中午好！";
+			}
+			else {
+				someTime="下午好！";
+			}
+			document.getElementById("greeting").innerHTML=someTime;
+			}
+		  		</script>
           			<li class="index-list"><a href="members.html" target="membersiframe"><i class="fa fa-group"></i> 成员</a></li>
           			<li class="index-list"><a href="files.html" target="membersiframe"><i class="fa fa-folder-open"></i> 文件</a></li>
           			<li class="index-list"><a href="album.html" target="membersiframe"><i class="fa fa-image"></i> 相册</a></li>
