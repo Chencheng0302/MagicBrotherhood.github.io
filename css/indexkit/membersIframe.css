@@ -1,0 +1,26 @@
+@media screen and (max-width: 600px) {
+		.display-index img{
+		width: 25%;
+	}
+}
+.display-index {
+	text-align: center;
+}
+ 
+/* .display-index-images {
+	border-radius: 4px;
+} */
+
+.display-index img{
+	border-radius: 50%;
+	opacity: 1;
+	transition-property: all;
+	transition-duration: 1s;
+	-webkit-transition-property: all;
+	-webkit-transition-duration: 1s;
+	filter: alpha(opacity=85);
+}
+.display-index img:hover{
+	opacity: 0.6;
+	filter: alpha(opacity=1);
+}
