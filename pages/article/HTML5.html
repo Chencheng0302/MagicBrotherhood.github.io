@@ -7,10 +7,6 @@
   <link rel="stylesheet" href="../../css/animate.css">
   <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
 <style>
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
   p {
     text-align: justify;
   }
@@ -54,7 +50,10 @@
           <h3>Operating Principles</h3>
           <p>HTML5 is requested by the HTTP(Hypertext Transfer Protocol), which is the fundamental support of data communication for the World Wide Web. HTML5 work with it, the procedure of it can be divided into a series of operations to exchange information between client and server, as shown in Figure 1.
           </p>
-          <img src="..." alt="img">
+          <figure>
+            <img src="../../images/article/html.png" alt="img" class="figure-img img-fluid">
+            <figcaption class="figure-caption text-center">Figure 1: The sequence of messages exchanged between client and server <a href="#Reference">[5]</a>.</figcaption>
+          </figure>
           <p>There is a fundamental step before that, which aims to establish a connection between the client and the server. In details, the client initiates a TCP connection and use it to send HTTP requests to the server <a href="#Reference">[5]</a>. Next, The sever grants access rights for the available resource to respond to these requests <a href="#Reference">[5]</a>. After that, the web server regards the application as an upgrade request of WebSocket, which is the fundamental element of HTML5 used to provide a lightweight mechanism for communication by using existing HTTP <a href="#Reference">[5]</a>. In this situation, the server responds to the client request and switch to the WebSocket protocol. Then, it sends WebSocket frames to the client.
           </p>
           <p>HTML5 can establish a WebSocket to perform tasks by using JavaScript APIs with the support of browser <a href="#Reference">[5]</a>, for example, open, close and communicate over the WebSocket connection. It means the server provides the WebSocket to the client, and the client can receive the WebSocket frame and close WebSocket with the respondent of the server by requesting to it. Additionally, there are some new technique in HTML5. For example, Location-based services, offered support for mobile browsers by a location API <a href="#Reference">[9]</a>.</p>
