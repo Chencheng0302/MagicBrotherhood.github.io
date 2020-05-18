@@ -2,135 +2,411 @@
 <html>
 <head>
   <title>Magic</title>
-  <link rel="stylesheet"
-  type="text/css" href="styles.css">
-  <link rel="stylesheet" type="text/css" href="css/loader.css">
-<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-	body {
-		margin: 0;
-	}
-	</style>
-	<script type="text/javascript">
-		function load() {
-      var a= setTimeout("loading.style.transition='opacity 1s'",0)
-      //设置透明度改变的过渡时间为0.3秒
-      var b= setTimeout("loading.style.opacity=0",500)
-      //0.5秒后加载动画开始变为透明
-      var c= setTimeout("loading.style.display='none'",800)
-      //当透明度为0的时候，隐藏掉它
-
-}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/BasicStyles.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/indexkit/indexkit.css">
+  <link rel="stylesheet" href="css/pushy.css">
+  <script type="text/javascript">
+    		function load() {
+          var a= setTimeout("loading.style.transition='opacity 1s'",0)
+          var b= setTimeout("loading.style.opacity=0",500)
+          var c= setTimeout("loading.style.display='none'",800)
+        }
 	</script>
 </head>
 <body onLoad="load()">
- 	<div id="loading">
-		<div id="loading-center">
-			<div id="loading-center-absolute">
-				<div class="object" id="object_one"></div>
-				<div class="object" id="object_two"></div>
-				<div class="object" id="object_three"></div>
-				<div class="object" id="object_four"></div>
-				<div class="object" id="object_five"></div>
-				<div class="object" id="object_six"></div>
-				<div class="object" id="object_seven"></div>
-				<div class="object" id="object_eight"></div>
-				<div class="object" id="object_big"></div>
-			</div>
-		</div>
-	</div>
-  <div id="header">
-    <div class="post-container">
-      <ul class="guide-line">
-		<li><a href="index.html"><i class="fa fa-home"></i>主页</a></li>
-        <li><a href="links.html"><i class="fa fa-link"></i>友情链接</a></li>
-        <li><a href="about.html"><i class="fa fa-info"></i>关于我们</a></li>
-        <li><a href="not_found.html"><i class="fa fa-pencil-square-o"></i>留言板</a></li>
-        <li><a href="more.html"><i class="fa fa-spinner"></i>更多</a></li>
-       <form class="formserch">
-       	<input type="text" name="search" placeholder="搜索...">
-       </form>
-        <li  style="float: right;margin-right: 2%;display: inline-block;margin-top: 0;"><a
-        href="mailto:907605461@qq.com?subject=Chencheng%20I%20Love%20You&body=I%20miss%20you%20for%20a%20
-        long%20time,%20I%20want%20to%20see%20you!"><i class="fa fa-envelope-o"></i>联系作者</a></li>
-      </ul>
+  <div id="loading">
+  <div class="loader-inner">
+    <div class="loader-line-wrap">
+      <div class="loader-line"></div>
     </div>
-      </div>
-    <div id="contents">
-      <div class="post-container">
-        <div class="post-speical">
-          <img src="images/qqphotos/lks.png" alt="" class="lks">
-        </div>
-      </div>
+    <div class="loader-line-wrap">
+      <div class="loader-line"></div>
     </div>
-    <div class="info">
-  <p><strong>公告： </strong>部分功能暂未上线</p>
-</div>
-    <div id="content">
-      <div class="left-menu">
-         		<br><br><br>
-				<div class="newcontainer">
-  <img src="images/qqimages/groupimage.JPG" alt="Avatar" class="image">
-  <div class="overlay">
-    <div class="text">Magic Brotherhood</div>
+    <div class="loader-line-wrap">
+      <div class="loader-line"></div>
+    </div>
+    <div class="loader-line-wrap">
+      <div class="loader-line"></div>
+    </div>
+    <div class="loader-line-wrap">
+      <div class="loader-line"></div>
+    </div>
   </div>
-		  </div>
-          		<h2 class="magicname"></h2>
-          		<ul>
-          			<li><p id="greeting"></p></li>
-          			         		<script>
-		  			function dailyTalk(){
-			var someTime="";
-			var time = new Date().getHours();
-			if (time>=6 && time<11){
-				someTime="早上好！";
-			}
-			else if (time>=11 && time<=14){
-				someTime="中午好！";
-			}
-			else {
-				someTime="下午好！";
-			}
-			document.getElementById("greeting").innerHTML=someTime;
-			}
-		  		</script>
-          			<li class="index-list"><a href="members.html" target="membersiframe"><i class="fa fa-group"></i> 成员</a></li>
-          			<li class="index-list"><a href="files.html" target="membersiframe"><i class="fa fa-folder-open"></i> 文件</a></li>
-          			<li class="index-list"><a href="album.html" target="membersiframe"><i class="fa fa-image"></i> 相册</a></li>
-          			<li class="index-list"><a href="display.html" target="membersiframe"><i class="fa fa-bar-chart"></i> 展览</a></li>
-          			<li class="index-list"><a href="public.html" target="membersiframe"><i class="fa fa-newspaper-o"></i> 公告栏</a></li>
-          			<li class="index-list"><a href="designs.html" target="membersiframe"><i class="fa fa-paper-plane"></i> 作品集</a></li>
-          			<li class="index-list"><a href="baidumap.html" target="membersiframe"><i class="fa fa-comment"></i> 反馈建议</a></li>
-          		</ul>
-          		<div class="warning">
-          			<p><strong>注意!</strong> 检测到您的设备是手机，故菜单栏链接所指页面会显示在下方的iframe中。</p>
-          		</div>
+</div>
+      <nav class="pushy pushy-left">
+        <ul class="list-unstyled">
+            <li><a href="#home">封面 Cover</a></li>
+            <li><a href="#features">特性 Features</a></li>
+            <li><a href="#game">游戏 Games</a></li>
+            <li><a href="#develop">开发 Developing</a></li>
+            <li><a href="#about">关于 About</a></li>
+            <li><a href="#gallery">展览 Gallery</a></li>
+            <li><a href="#contact">反馈 Feedback</a></li>
+        </ul>
+      </nav>
+      <div class="site-overlay">
+      </div>
+      <header id="home">
+          <div class="container-fluid">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-10 col-sm-8 col-md-6">
+                          <a href="#" style="">
+                              <img src="images/icon.png" width="50px" alt="" class="img-responsive rounded">
+                              <div class="d-inline-block align-bottom">
+                               <span class="lead text-secondary title" style=""><strong>MAGIC</strong></span> <span class="text-dark lead title">BROTHERHOOD</span>
+                             </div>
+                          </a>
+                      </div>
+                      <div class="col-2 col-sm-2 offset-sm-2 col-md-1 offset-md-5 text-center">
+                        <div class="menu-btn"><span class="hamburger">&#9776;</span></div>
+                      </div>
+                  </div>
+                  <div class="blank">
+                  </div>
+                  <div class="jumbotron mt-5">
+                      <h1 class="text-light"><small>Facing the Sea with Spring Blossoms</small></br>
+          <strong>面朝大海，春暖花开</strong></h1>
+                      <p class="mt-3">Version: Beta 1.3<br>2020年五月 | May 2020</p>
+                      <p><a class="btn btn-primary" target="_blank" href="pages/article/log.html" role="button">日志 Learn More</a> <a href="pages/basic/login.html" class="btn btn-danger" role="button">登录 Sign in</a></p>
+                  </div>
+              </div>
           </div>
-		<iframe src="members.html" width="74%" height="800" frameborder="0" name="membersiframe" class="iframeindex"></iframe>
-        </div>
-       <div class="presentation">
-         <p>妙语连珠是猎物，吞吞吐吐是喜欢</p>
-         <p>喜欢以前的自己，更期待以后的自己</p>
-         <p>何与君相识，无言泪千行&nbsp;</p>
-       </div>
-         <br><br><br>
-      <div id="footer">
-        <div class="post-container">
-          <div class="column">
-            <h4>Links</h4>
-            <p>
-              <a href="https://shang.qq.com/wpa/qunwpa?idkey=4fb192a4f9837f98666fae80cc75adc8183eb287df8b7a434f85f25d97fd8394">
-				<span class="fa fa-handshake-o"></span>加入我们</a>              <br>
-              <a href="donate.html"><span class="fa fa-rmb"></span> &nbsp;&nbsp;捐赠</a>
-            </p>
-          </div>
-          <div class="column">
-            <h4>Stories</h4>
-            <p>Copyright © MagicBrotherhood</p>
+      </header>
+
+      <section id="features">
+        <div class="container pt-5">
+          <div class="row features">
+            <div class="col-md-4 text-center wow fadeInUp" data-wow-delay="100ms" style="visibility: visible; animation-delay: 100ms; animation-name: fadeInUp;">
+                <h1><svg class="bi bi-controller" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M11.119 2.693c.904.19 1.75.495 2.235.98.407.408.779 1.05 1.094 1.772.32.733.599 1.591.805 2.466.206.875.34 1.78.364 2.606.024.815-.059 1.602-.328 2.21a1.42 1.42 0 0 1-1.445.83c-.636-.067-1.115-.394-1.513-.773a11.307 11.307 0 0 1-.739-.809c-.126-.147-.25-.291-.368-.422-.728-.804-1.597-1.527-3.224-1.527-1.627 0-2.496.723-3.224 1.527-.119.131-.242.275-.368.422-.243.283-.494.576-.739.81-.398.378-.877.705-1.513.772a1.42 1.42 0 0 1-1.445-.83c-.27-.608-.352-1.395-.329-2.21.024-.826.16-1.73.365-2.606.206-.875.486-1.733.805-2.466.315-.722.687-1.364 1.094-1.772.486-.485 1.331-.79 2.235-.98.932-.196 2.03-.292 3.119-.292 1.089 0 2.187.096 3.119.292zm-6.032.979c-.877.185-1.469.443-1.733.708-.276.276-.587.783-.885 1.465a13.748 13.748 0 0 0-.748 2.295 12.351 12.351 0 0 0-.339 2.406c-.022.755.062 1.368.243 1.776a.42.42 0 0 0 .426.24c.327-.034.61-.199.929-.502.212-.202.4-.423.615-.674.133-.156.276-.323.44-.505C4.861 9.97 5.978 9.026 8 9.026s3.139.943 3.965 1.855c.164.182.307.35.44.505.214.25.403.472.615.674.318.303.601.468.929.503a.42.42 0 0 0 .426-.241c.18-.408.265-1.02.243-1.776a12.354 12.354 0 0 0-.339-2.406 13.753 13.753 0 0 0-.748-2.295c-.298-.682-.61-1.19-.885-1.465-.264-.265-.856-.523-1.733-.708-.85-.179-1.877-.27-2.913-.27-1.036 0-2.063.091-2.913.27z" clip-rule="evenodd"/>
+  <path d="M11.5 6.026a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-1 1a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm2 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-1 1a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-7-2.5h1v3h-1v-3z"/>
+  <path d="M3.5 6.526h3v1h-3v-1zM3.051 3.26a.5.5 0 0 1 .354-.613l1.932-.518a.5.5 0 0 1 .258.966l-1.932.518a.5.5 0 0 1-.612-.354zm9.976 0a.5.5 0 0 0-.353-.613l-1.932-.518a.5.5 0 1 0-.259.966l1.932.518a.5.5 0 0 0 .612-.354z"/>
+</svg></h1>
+                <h1>游戏 Games</h1>
+                  <p>“从水下第一个生命的萌芽开始...到石器时代的巨型野兽...再到人类第一次直立行走，你已经经历许多。现在，开你伟大的探索吧：从早期文明的摇篮到浩瀚星宇...”</p>
+                  <p class="text-muted"><em>From the first stirrings of life beneath water… to the great beasts of the Stone Age… to man taking his first upright steps, you have come far. Now begins your greatest quest: from this early cradle of civilization on towards the stars.</em></p>
+                  <footer class="blockquote-footer mb-2"><cite title="Civilization">Sid Meier's Civilization VI</cite></footer>
+
+            </div>
+            <div class="col-md-4 text-center wow fadeInUp" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInUp;">
+                  <h1><svg class="bi bi-code-slash" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0zm-.999-3.124a.5.5 0 0 1 .33.625l-4 13a.5.5 0 0 1-.955-.294l4-13a.5.5 0 0 1 .625-.33z" clip-rule="evenodd"/>
+</svg></h1>
+                  <h1>开发 Coding</h1>
+                  <p>我们致力于开发一些有点用亦或是完全没用的东西，他们是生活中的调味剂，给予我们不一样的生活方式。诸如近期我们其中的一名成员通过自己的努力，HTML从入门到精通，已经创造了令人惊叹的作品，其作品将于在下方栏目提供。</p>
+                  <p class="text-muted">Although our applications (or call them codes :D) are somewhat useful or useless, they still regarded as a interest which bring us different lifestyle.</p>
+                  <p>
+                  </p>
+            </div>
+            <div class="col-md-4 text-center wow fadeInUp" data-wow-delay="500ms" style="visibility: visible; animation-delay: 500ms; animation-name: fadeInUp;">
+                <h1><svg class="bi bi-people" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.995-.944v-.002.002zM7.022 13h7.956a.274.274 0 0 0 .014-.002l.008-.002c-.002-.264-.167-1.03-.76-1.72C13.688 10.629 12.718 10 11 10c-1.717 0-2.687.63-3.24 1.276-.593.69-.759 1.457-.76 1.72a1.05 1.05 0 0 0 .022.004zm7.973.056v-.002.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10c-1.668.02-2.615.64-3.16 1.276C1.163 11.97 1 12.739 1 13h3c0-1.045.323-2.086.92-3zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" clip-rule="evenodd"/>
+</svg></h1>
+                <h1>闲聊 Chat</h1>
+                <p>这里左右为男，进退两男，男上加男，处处为难<br>
+                  若您是女生，您可选择点击下方链接加入我们<br>
+                  <span class="text-muted"><small>否则可使用快捷键 <kbd>Alt + F4</kbd> 加入</small></span>
+                </p>
+                <a class="btn btn-outline-primary text-left" href="pages/basic/works.html">加入我们 | Join Us</a>
+                <p class="mt-3 text-muted">Due to the incredible ratio of ladies to gentlemans, if you are ladies, you are welcomed to click the button above, or press short cut key <small><kbd>Alt + F4</kbd></small> to join us.</p>
+            </div>
           </div>
         </div>
       </div>
+      </section>
+
+      <section id="game" class="game wow fadeInUp" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInUp;">
+    <div class="container-fluid">
+            <div class="row">
+                <div class="col-10 offset-1 col-lg-4 offset-lg-7 opaline">
+                    <div class="row">
+                        <div class="col-10 offset-10-1">
+                            <blockquote class="blockquote">
+                              <h4>起于游戏，存于游戏，依于游戏。</h4>
+                              <p>From the Game, On the Game, By the game.</p>
+                            </blockquote>
+                            <p class="lead">游戏是最基础的社交方式，也是开始的地方。<br>我们可能地隔千里，时隔数时，但只要能出现在好友列表里，无论多远，都能“天涯共此时”。</p>
+                            <p class="lead"><em>Whenever, Wherever, However, Be <strong>ONLINE</strong> Then WE Share a GREAT Time Simultaneously.</em></p>
+                            <p class="lead">不论何种类型，何种题材，是源自<em>LOL</em>的团队配合，亦或是<em>GTA</em>里的犯罪团伙，又或是文明里的熬夜猝死局，我们都在这里，与你一同分享。</p>
+                            <p class="lead"><em>Whatever the category and theme it is, From the Cooperation in <em>League of Legends</em>, the Gang Crime in <em>Grand Theft Auto</em>, or Midnights with <em>Sid Meier's Civilization</em>, we are willing to share with you.</em></p>
+                            <h6 class="lead"><a class="text-reset joinUs" target="_blank" href="https://shang.qq.com/wpa/qunwpa?idkey=4fb192a4f9837f98666fae80cc75adc8183eb287df8b7a434f85f25d97fd8394">加入我们 | Join Us &raquo;</a></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</section>
+
+      <section id="develop">
+        <div class="container">
+          <div class="row">
+              <div class="col-md-7 wow fadeInUp" data-wow-delay="100ms" style="visibility: visible; animation-delay: 100ms; animation-name: fadeInUp;">
+                <div class="container">
+                  <h2 class="useHelvetica">技术堪忧但仍试图创造<br><small class="text-muted">Noob but Creative</small></h2>
+                  <p class="lead">我们总是会尝试尽自己之手去创造一些新的事物，但无奈自身的规模以及能力并不允许我们有可观的生产力，只有寥寥几份作品。<br><small class="text-muted"><em>There are only a few of work of us due to we don't have considerable productivity, due to the limitations of scale and ability.</em></small></p>
+                  <p class="lead">这也有属于技术的一份天地，尽管我们对此网站的支持都略显乏力，但我们并不吝啬于分享已有的成果。<br><small><em><span class="text-muted">Despite the fact that lack of the ability to support such a website, we are still willing to share our outcomes with you.</span></em></small></p>
+                </div>
+              </div>
+              <div class="col-md-5 wow fadeInDown" data-wow-delay="150ms" style="visibility: visible; animation-delay: 150ms; animation-name: fadeInDown;">
+                <div class="conntainer mt-2">
+                  <figure class="figure">
+                    <img src="images/index/beta1.2ss.png" alt="Version Beta 1.2" class="figure-img img-fluid rounded">
+                    <figcaption class="figure-caption">测试版本1.2 2018/09/23 <br>Version Beta 1.2 Updated on 23rd, Sep, 2018</figcaption>
+                  </figure>
+                </div>
+              </div>
+          </div>
+          <div class="row mt-5">
+              <div class="col-md-6 pl-2">
+                <div class="container">
+                  <h3 class="useHelvetica">如下的项目依然在进展当中<br><small class="text-muted">Projects in progress are listed as following</small></h3>
+                  <div class="progresses">
+                    <div class="mb-2 wow fadeInUp useTimes" data-wow-delay="150ms" style="visibility: visible; animation-delay: 150ms; animation-name: fadeInUp;">
+                      <h4><img src="images/icon.png" alt="" width="7%" class="rounded"> I Still Remember <span class="text-muted useHelvetica"><small><em>Wechat Mini Program</em></small></span></h4>
+                      <div class="progress">
+                        <div class="wow progress-bar bg-info progress-bar-striped" role="progressbar" style="width:5%;"aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                          5%
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 wow fadeInUp useTimes" data-wow-delay="250ms" style="visibility: visible; animation-delay: 250ms; animation-name: fadeInUp;">
+                      <h4><svg t="1586887840587" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10886" width="1.2em" height="1.2em"><path d="M960 512c0 97.76-28.704 185.216-85.664 263.264-56.96 78.016-130.496 131.84-220.64 161.856-10.304 1.824-18.368 0.448-22.848-4.032a22.4 22.4 0 0 1-7.2-17.504v-122.88c0-37.632-10.304-65.44-30.464-82.912a409.856 409.856 0 0 0 59.616-10.368 222.752 222.752 0 0 0 54.72-22.816c18.848-10.784 34.528-23.36 47.104-38.592 12.544-15.232 22.848-35.904 30.912-61.44 8.096-25.568 12.128-54.688 12.128-87.904 0-47.072-15.232-86.976-46.208-120.16 14.368-35.456 13.024-74.912-4.48-118.848-10.752-3.616-26.432-1.344-47.072 6.272a301.44 301.44 0 0 0-53.824 25.568l-21.984 13.888A407.776 407.776 0 0 0 512 280.16c-38.56 0-75.776 4.928-112.096 15.232a444.48 444.48 0 0 0-24.672-15.68c-10.336-6.272-26.464-13.888-48.896-22.432-21.952-8.96-39.008-11.232-50.24-8.064-17.024 43.936-18.368 83.424-4.032 118.848-30.496 33.632-46.176 73.536-46.176 120.608 0 33.216 4.032 62.336 12.128 87.456 8.032 25.12 18.368 45.76 30.496 61.44 12.544 15.68 28.224 28.704 47.072 39.04 18.848 10.304 37.216 17.92 54.72 22.816a409.6 409.6 0 0 0 59.648 10.368c-15.712 13.856-25.12 34.048-28.704 60.064a99.744 99.744 0 0 1-26.464 8.512 178.208 178.208 0 0 1-33.184 2.688c-13.024 0-25.568-4.032-38.144-12.544-12.544-8.512-23.296-20.64-32.256-36.32a97.472 97.472 0 0 0-28.256-30.496c-11.232-8.064-21.088-12.576-28.704-13.92l-11.648-1.792c-8.096 0-13.92 0.928-17.056 2.688-3.136 1.792-4.032 4.032-2.688 6.72 1.344 2.688 3.136 5.408 5.376 8.096 2.24 2.688 4.928 4.928 7.616 7.168l4.032 2.688c8.544 4.032 17.056 11.232 25.568 21.984 8.544 10.752 14.368 20.64 18.4 29.6l5.824 13.44c4.928 14.816 13.44 26.912 25.568 35.872 12.096 8.992 25.088 14.816 39.008 17.504 13.888 2.688 27.36 4.032 40.352 4.032 12.992 0 23.776-0.448 32.288-2.24l13.472-2.24c0 14.784 0 32.288 0.416 52.032 0 19.744 0.48 30.496 0.48 31.392a22.624 22.624 0 0 1-7.648 17.472c-4.928 4.48-12.992 5.824-23.296 4.032-90.144-30.048-163.68-83.84-220.64-161.888C92.256 697.216 64 609.312 64 512c0-81.152 20.192-156.064 60.096-224.672a445.184 445.184 0 0 1 163.232-163.232C355.936 84.192 430.816 64 512 64s156.064 20.192 224.672 60.096a445.184 445.184 0 0 1 163.232 163.232C939.808 355.488 960 430.848 960 512" fill="#000000" p-id="10887"></path></svg>
+                        此网站 <span class="text-muted useHelvetica"><small><em>This Website</em></small></span></h4>
+                      <div class="progress">
+                        <div class="wow progress-bar bg-success progress-bar-striped" role="progressbar" style="width:70%;"aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                          70%
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 wow fadeInUp useTimes" data-wow-delay="350ms" style="visibility: visible; animation-delay: 350ms; animation-name: fadeInUp;">
+                      <h4><svg t="1586886144042" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2607" width="1.2em" height="1.2em"><path d="M640 512h-32v-64h32a96 96 0 1 0-96-96v320c0 88.224-71.776 160-160 160s-160-71.776-160-160 71.776-160 160-160h32v64h-32a96 96 0 1 0 96 96V352c0-88.224 71.776-160 160-160s160 71.776 160 160-71.776 160-160 160M512 64C264.576 64 64 264.576 64 512s200.576 448 448 448 448-200.576 448-448S759.424 64 512 64" fill="#8a8a8a" p-id="2608"></path></svg> 老狗的鬼畜<span class="text-muted useHelvetica"><small><em> Drama for OldDog</em></small></span></h4>
+                      <div class="progress">
+                        <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" style="width:100%;"aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                          众筹中...
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 wow fadeInUp useTimes" data-wow-delay="450ms" style="visibility: visible; animation-delay: 450ms; animation-name: fadeInUp;">
+                      <h4><svg class="bi bi-phone" width="1.2em" height="1.2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M11 1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" clip-rule="evenodd"/>
+                        <path fill-rule="evenodd" d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" clip-rule="evenodd"/></svg>
+                        Magic移动端<span class="text-muted useHelvetica"><small><em> Magic Lite</em></small></span></h4>
+                      <div class="progress">
+                        <div class="progress-bar bg-secondary progress-bar-striped" role="progressbar" style="width:100%;"aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                          准备中...
+                        </div>
+                      </div>
+                    </div>
+                    <figure class="wow figure mt-2 mb-2 fadeInDown" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInDown;">
+                      <img src="images/index/MagiciOS.png" alt="Version Beta 1.2" class="figure-img img-fluid rounded">
+                      <figcaption class="figure-caption">Magic Lite预览图 （暂用于微信小程序）2018/10/7 <br>Magic Lite Preview (Used in ISR temporarily) Last Updated on 7th, Oct, 2018</figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5 offset-md-1 wow fadeInRight" data-wow-delay="50ms" style="visibility: visible; animation-delay: 50ms; animation-name: fadeInRight;">
+                <p class="lead">如果可以的话，我们愿意与您交流开发的心得，互相学习。<br><small><em><span class="text-muted">If permits, we are willing to exchange development experience with you, thus we can learn from each other.</span></em></small></p>
+                <p class="lead">本站的建立脱不了引用前人的努力，同样地，您也可以引用我们的结构和形式，这也是给予我们的肯定。<br><small><em><span class="text-muted">The establishment of this site is inseparable from the efforts of the predecessors of the reference office. Similarly, you can also cite our structure and form, which is also affirmed to us.</span></em></small></p>
+                <p class="lead">同时也非常乐意听取您的的宝贵建议，您可以给予我们意见反馈，亦或是通过GitHub加入我们的开发团队。<br><small><em><span class="text-muted">Consistently, it's our pleasure to listen your constructive suggestions, even cooperating with us through GitHub.</span></em></small></p>
+                <a class="btn btn-outline-secondary text-left" href="pages/basic/works.html">作品 | Works</a>
+              </div>
+          </div>
+        </div>
+      </section>
+
+<section id="about" class="data wow fadeInUp" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInUp;">
+  <img src="images/skins_08.png" alt="About" class="img-fluid opa">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="container">
+            <h1 class="display-4 useHelvetica text-secondary text-center"style="margin-top:-1em;"><strong>Magic Brotherhood</strong></h1>
+          </div>
+      </div>
+      <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <p class="lead">
+                  起于2013年LOL大火时期的意外组队，随着时间磨合之后，在次年3月26日建队.
+                    随后的几年里，成员数目剧增，又于2015年7月26日建立了<a class="text-decoration-none" href="https://shang.qq.com/wpa/qunwpa?idkey=4fb192a4f9837f98666fae80cc75adc8183eb287df8b7a434f85f25d97fd8394">
+                     QQ群</a>。时至今日，已有成员约34人。
+                </p>
+                <hr>
+                <p class="lead text-justify">
+                  Arise from an occasional teamwork in 2013, which is one of the hottest period of LOL.
+                    Increasingly rapid developing brings considerable scale of members, thus the first official meadia was founded with <a class="text-decoration-none" href="https://shang.qq.com/wpa/qunwpa?idkey=4fb192a4f9837f98666fae80cc75adc8183eb287df8b7a434f85f25d97fd8394">
+                     QQ Group Chat</a> on 26th July 2015. Nowadays, there are approximately 34 members.
+                </p>
+                <a class="btn btn-outline-primary" href="pages/basic/about.html" role="button">更多 | More</a>
+            </div>
+            <div class="col-md-4 offset-md-1">
+              <figure>
+                <img src="images/index/magic.svg" alt="MAGIC" class="figure-img img-fluid rounded">
+                <figcaption class="figure-caption">#Magic</figcaption>
+              </figure>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-12 mt-5 mb-5">
+            <blockquote class="blockquote text-center">
+              <p class="mb-0">妙语连珠是猎物，吞吞吐吐是喜欢<br>喜欢以前的自己，更期待以后的自己<br>何与君相识，无言泪千行</p>
+              <footer class="blockquote-footer"><cite title="Brotherhood">Magical Brotherhood</cite></footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+</section>
+
+<section id="history" class="wow fadeInUp" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInUp;">
+<div class="container-fluid">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6 opaline">
+              <div class="row">
+                  <div class="col-md-10 col-md-offset-1">
+                      <blockquote class="blockquote">
+                        <h4>不仅仅如此</h4>
+                        <p>Beyond Games</p>
+                      </blockquote>
+                      <p class="lead">如果你不喜欢游戏，也不涉及于开发，那也无伤大雅。</p>
+                      <p class="lead"><em>It doesn't matter you are not a Gamer or Developer.</em></p>
+                      <p class="lead">我们并不冰冷地受限于游戏于代码之中。</p>
+                      <p class="lead"><em>We are not boringly dependent from these Games or Codes.</em></p>
+                      <p class="lead">即使以上内容都不能提起你的兴趣，我们也愿意以交朋友的理由认识你。</p>
+                      <p class="lead"><em>We'd like to be friend with you, even though all the materials we provide haven't attracted you xD.</em></p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</section>
+
+<section id="gallery" class="wow fadeInUp" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInUp;">
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-7">
+          <div class="row">
+            <div class="col-sm-12">
+              <figure class="wow bounceIn" data-wow-delay="100ms" style="visibility: visible; animation-delay: 100ms; animation-name: bounceIn;">
+                <img src="images/index/gal/london.jpg" alt="" class="figure-img img-fluid rounded">
+              </figure>
+            </div>
+            <div class="col-sm-12">
+              <figure class="wow bounceIn" data-wow-delay="300ms" style="visibility: visible; animation-delay: 100ms; animation-name: bounceIn;">
+                <img src="images/index/gal/pinjiang.jpg" alt="" class="figure-img img-fluid rounded">
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <div class="row">
+            <div class="col-sm-12">
+              <figure class="wow bounceIn" data-wow-delay="200ms" style="visibility: visible; animation-delay: 200ms; animation-name: bounceIn;">
+                <img src="images/index/gal/uos.jpg" alt="" class="figure-img img-fluid rounded">
+              </figure>
+            </div>
+            <div class="col-sm-12">
+              <figure class="wow bounceIn" data-wow-delay="400ms" style="visibility: visible; animation-delay: 400ms; animation-name: bounceIn;">
+                <img src="images/index/gal/zhouzhuang.jpg" alt="" class="figure-img img-fluid rounded">
+              </figure>
+            </div>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-5">
+          <div class="row">
+            <div class="col-sm-12">
+              <figure class="wow bounceIn" data-wow-delay="100ms" style="visibility: visible; animation-delay: 100ms; animation-name: bounceIn;">
+                <img src="images/index/gal/monicafe.jpg" alt="" class="figure-img img-fluid rounded">
+              </figure>
+            </div>
+            <div class="col-sm-12">
+              <figure class="wow bounceIn" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: bounceIn;">
+                <img src="images/index/gal/dalian.jpg" alt="" class="figure-img img-fluid rounded">
+              </figure>
+          </div>
+          </div>
+        </div>
+        <div class="col-sm-7">
+          <div class="row">
+            <div class="col-sm-12">
+              <figure class="wow bounceIn" data-wow-delay="200ms" style="visibility: visible; animation-delay: 200ms; animation-name: bounceIn;">
+                <img src="images/index/gal/danxia2019.jpg" alt="" class="figure-img img-fluid rounded">
+              </figure>
+            </div>
+
+            </div>
+            <div class="col-sm-12">
+              <figure class="wow bounceIn" data-wow-delay="400ms" style="visibility: visible; animation-delay: 400ms; animation-name: bounceIn;">
+                <img src="images/index/gal/pinjiang1.jpg" alt="" class="figure-img img-fluid rounded">
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section id="contact" class="prefooter wow fadeInUp" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInUp;">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h3>联系与反馈 <br>Contact & Feedback</h3>
+                            <p>后续的开发与更新少不了您宝贵的建议，您可以通过邮件的方式联系我们，给予我们一些意见反馈，或是向我们投稿您的原创内容，这里会予以展示。<br>Your advices are pretty essential for us, you can contact us by Email, we appreciate to receive your feedback. Additionally, you can submit your personal work to us, in which regard us as your gallary.</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                  <p>反馈建议：<br>Feedback: ChenchengOfficial@gmail.com<a href="mailto:ChenchengOfficial@gmail.com?subject=Feedback"> <button type="button" class="btn btn-danger btn-sm" style="padding: 0em 0.2em 0em 0.2em;">
+                                    <svg class="bi bi-envelope-fill" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M.05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2H2A2 2 0 0 0 .05 3.555zM16 4.697l-5.875 3.59L16 11.743V4.697zm-.168 8.108L9.157 8.879 8 9.586l-1.157-.707-6.675 3.926A2 2 0 0 0 2 14h12a2 2 0 0 0 1.832-1.195zM0 11.743l5.875-3.456L0 4.697v7.046z"/>
+                                    </svg>                                  </button></a><br>内容投稿：<br>Submission: iLuyAo@yahoo.com
+                                    <a href="mailto:iLuyAo@yahoo.com?subject=Submission"> <button type="button" class="btn btn-danger btn-sm" style="padding: 0em 0.2em 0em 0.2em;">
+                                      <svg class="bi bi-envelope-fill" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M.05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2H2A2 2 0 0 0 .05 3.555zM16 4.697l-5.875 3.59L16 11.743V4.697zm-.168 8.108L9.157 8.879 8 9.586l-1.157-.707-6.675 3.926A2 2 0 0 0 2 14h12a2 2 0 0 0 1.832-1.195zM0 11.743l5.875-3.456L0 4.697v7.046z"/>
+                                      </svg>                                  </button></a>                                    <br></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      <footer style="background-color: rgba(36, 50, 59, 1);padding-top: 2em;padding-bottom: 1.2em;color:white;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <h3><img src="images/icon.png" width="40" height="40" class="d-inline-block align-bottom rounded"> MAGIC</h3>
+              <p>&#64;Magic Brotherhood. 2013~2020</p>
+            </div>
+            <div class="col-md-4">
+              <p class="text-right lead pt-1">支持 | Support</p>
+              <p class="text-right">
+                <svg style="opacity:0.6;" t="1589486213911" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3355" width="32" height="32"><path d="M368.832 374.816a26.656 26.656 0 0 0 0.128 53.28 26.656 26.656 0 0 0-0.128-53.28M502.08 428.096a26.592 26.592 0 1 0-0.288-53.248 26.656 26.656 0 0 0 0.32 53.248M566.4 513.888a22.24 22.24 0 0 0-22.08 22.336 22.048 22.048 0 0 0 22.08 22.016 21.984 21.984 0 0 0 22.08-22.272 22.144 22.144 0 0 0-22.08-22.08" fill="#ffffff" p-id="3356"></path><path d="M788.16 588.48c-1.76 25.728-11.36 48.384-27.2 68.48a150.112 150.112 0 0 1-28.576 27.68c-5.952 4.448-7.104 7.68-5.216 14.848 2.496 9.44 4.992 18.848 7.584 28.288 0.736 2.72 0.64 5.216-1.792 7.04-2.336 1.888-4.736 1.28-7.072-0.096-11.648-6.752-23.36-13.44-34.912-20.224a19.712 19.712 0 0 0-16.256-2.08c-44.992 12.128-89.088 9.6-131.744-9.408-31.04-13.824-56.096-34.784-72.736-64.864a116.704 116.704 0 0 1-14.752-63.136c1.344-27.584 11.52-51.84 29.024-72.992 21.824-26.368 49.984-43.136 82.528-52.8a196.192 196.192 0 0 1 58.72-7.68 183.744 183.744 0 0 1 81.6 19.712c29.92 15.04 53.76 36.576 68.8 66.88 9.44 19.04 13.44 39.264 12 60.384m-344.224 33.152a237.408 237.408 0 0 1-73.472-8.96 20.8 20.8 0 0 0-16.8 2.208l-41.952 24.288-1.696 0.96c-2.72 1.6-5.44 1.792-8.032-0.32-2.592-1.984-2.912-4.8-2.144-7.744 0.96-3.744 2.048-7.424 3.04-11.136 2.176-8.064 4.352-16.128 6.464-24.224 1.92-7.392 0.288-11.968-5.856-16.544a182.176 182.176 0 0 1-31.264-29.12c-18.432-21.888-30.72-46.656-35.008-75.072a139.52 139.52 0 0 1 14.72-87.264c16.512-31.68 41.44-55.136 72.32-72.544a219.488 219.488 0 0 1 80.384-26.24c10.24-1.28 20.576-2.016 30.912-1.952a226.464 226.464 0 0 1 93.92 19.648c35.744 16.128 65.088 39.776 85.408 73.792 8.256 13.856 14.048 28.672 17.28 44.48 0.64 2.784 0.608 2.784-2.24 2.688a211.072 211.072 0 0 0-78.4 11.648c-34.24 12.128-63.264 31.584-85.056 61.024a131.84 131.84 0 0 0-26.272 68.736 124.32 124.32 0 0 0 5.568 49.056c0.64 2.016 0.448 2.528-1.824 2.56M512 64C264.576 64 64 264.576 64 512c0 247.456 200.576 448 448 448s448-200.544 448-448c0-247.424-200.576-448-448-448" fill="#ffffff" p-id="3357"></path><path d="M677.408 513.888a22.304 22.304 0 0 0-22.144 22.08 22.112 22.112 0 1 0 44.256 0.256 22.304 22.304 0 0 0-22.112-22.336" fill="#ffffff" p-id="3358"></path></svg>
+                <svg style="opacity:0.6;" t="1589486544034" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4167" width="32" height="32"><path d="M578.656 651.648S512 704.96 487.776 718.944a300.512 300.512 0 0 1-59.104 26.08 247.808 247.808 0 0 1-46.88 10.688c-13.408 1.472-24.512 2.4-33.312 2.848a7.232 7.232 0 0 1-3.136 0.64h-10.08a249.92 249.92 0 0 1-65.088-8.224 164.768 164.768 0 0 1-53.12-24.192 117.856 117.856 0 0 1-35.84-40.256c-8.832-16.16-13.216-34.912-13.216-56.288 0.416-18.432 5.44-35.2 15.04-50.304a133.504 133.504 0 0 1 37.44-38.4 177.536 177.536 0 0 1 50.976-23.904 172.384 172.384 0 0 1 56.288-6.88c18.432 0.832 36.256 3.008 53.44 6.56a485.44 485.44 0 0 1 49.376 12.928c15.712 5.024 30.592 10.464 44.64 16.32 14.08 5.92 27.36 11.552 39.936 17.024a615.04 615.04 0 0 0 32.704 12.576c12.16-15.52 22.4-30.72 30.816-45.6a473.504 473.504 0 0 0 33.344-72c2.944-8.384 4.8-14.24 5.664-17.6h-272.96v-30.208H473.6v-69.76H294.368v-30.208h179.264v-56.64c0-3.744 2.08-6.784 6.272-9.088 4.192-2.304 9.024-3.872 14.464-4.736 6.304-1.248 13.44-1.888 21.376-1.888h48.416v72.32h184.288v30.208H564.16v69.792h146.432l0.096-0.64v0.64h-0.096c-2.944 18.688-7.936 38.4-14.976 59.136a455.52 455.52 0 0 1-26.112 61.632 432.96 432.96 0 0 1-45.6 71.04s144.32 69.088 296.704 93.376C945.888 639.84 960 577.536 960 512c0-247.424-200.576-448-448-448S64 264.576 64 512c0 247.392 200.576 448 448 448 153.472 0 288.896-77.184 369.664-194.848-82.048-17.888-169.216-54.08-303.04-113.504zM224 621.12c-1.696 76.704 85.632 82.4 99.104 82.816 44.544 1.344 80.48-15.36 108.48-31.872 27.968-16.512 73.632-59.2 75.36-60.64 1.664-1.472 3.36-3.04 5.024-4.704-12.224-6.72-24.224-12.864-36-18.528-11.776-5.632-71.68-37.6-124.8-43.04C250.496 534.784 224.512 597.824 224 621.12z" fill="#ffffff" p-id="4168"></path></svg>
+                <a class="git" href="https://github.com/Chencheng0302/MagicBrotherhood.github.io" target="_blank">
+                  <svg t="1589486623496" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4401" width="32" height="32"><path d="M960 512c0 97.76-28.704 185.216-85.664 263.264-56.96 78.016-130.496 131.84-220.64 161.856-10.304 1.824-18.368 0.448-22.848-4.032a22.4 22.4 0 0 1-7.2-17.504v-122.88c0-37.632-10.304-65.44-30.464-82.912a409.856 409.856 0 0 0 59.616-10.368 222.752 222.752 0 0 0 54.72-22.816c18.848-10.784 34.528-23.36 47.104-38.592 12.544-15.232 22.848-35.904 30.912-61.44 8.096-25.568 12.128-54.688 12.128-87.904 0-47.072-15.232-86.976-46.208-120.16 14.368-35.456 13.024-74.912-4.48-118.848-10.752-3.616-26.432-1.344-47.072 6.272a301.44 301.44 0 0 0-53.824 25.568l-21.984 13.888A407.776 407.776 0 0 0 512 280.16c-38.56 0-75.776 4.928-112.096 15.232a444.48 444.48 0 0 0-24.672-15.68c-10.336-6.272-26.464-13.888-48.896-22.432-21.952-8.96-39.008-11.232-50.24-8.064-17.024 43.936-18.368 83.424-4.032 118.848-30.496 33.632-46.176 73.536-46.176 120.608 0 33.216 4.032 62.336 12.128 87.456 8.032 25.12 18.368 45.76 30.496 61.44 12.544 15.68 28.224 28.704 47.072 39.04 18.848 10.304 37.216 17.92 54.72 22.816a409.6 409.6 0 0 0 59.648 10.368c-15.712 13.856-25.12 34.048-28.704 60.064a99.744 99.744 0 0 1-26.464 8.512 178.208 178.208 0 0 1-33.184 2.688c-13.024 0-25.568-4.032-38.144-12.544-12.544-8.512-23.296-20.64-32.256-36.32a97.472 97.472 0 0 0-28.256-30.496c-11.232-8.064-21.088-12.576-28.704-13.92l-11.648-1.792c-8.096 0-13.92 0.928-17.056 2.688-3.136 1.792-4.032 4.032-2.688 6.72 1.344 2.688 3.136 5.408 5.376 8.096 2.24 2.688 4.928 4.928 7.616 7.168l4.032 2.688c8.544 4.032 17.056 11.232 25.568 21.984 8.544 10.752 14.368 20.64 18.4 29.6l5.824 13.44c4.928 14.816 13.44 26.912 25.568 35.872 12.096 8.992 25.088 14.816 39.008 17.504 13.888 2.688 27.36 4.032 40.352 4.032 12.992 0 23.776-0.448 32.288-2.24l13.472-2.24c0 14.784 0 32.288 0.416 52.032 0 19.744 0.48 30.496 0.48 31.392a22.624 22.624 0 0 1-7.648 17.472c-4.928 4.48-12.992 5.824-23.296 4.032-90.144-30.048-163.68-83.84-220.64-161.888C92.256 697.216 64 609.312 64 512c0-81.152 20.192-156.064 60.096-224.672a445.184 445.184 0 0 1 163.232-163.232C355.936 84.192 430.816 64 512 64s156.064 20.192 224.672 60.096a445.184 445.184 0 0 1 163.232 163.232C939.808 355.488 960 430.848 960 512" fill="#ffffff" p-id="4402"></path></svg>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script src="javascript/jquery.min.js"></script>
+      <script src="javascript/jquery.magnific-popup.min.js"></script>
+      <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.0.4/js/bootstrap-scrollspy.js"></script>
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+      <script src="javascript/wow.min.js"></script>
+      <script src="javascript/pushy.min.js"></script>
+      <script src="javascript/scripts.js"></script>
+
 </body>
 </html>
