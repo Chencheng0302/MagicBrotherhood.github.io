@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML5</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/animate.css">
+  <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+<style>
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+  p {
+    text-align: justify;
+  }
+}	</style>
+</head>
+<body>
+  <div class="container">
+    <header class="blog-header py-3">
+      <div class="row flex-nowrap justify-content-between align-items-center">
+        <div class="col-4 pt-1">
+          <a class="navbar-brand mb-0 h1 text-muted" href="../../index.html"><img src="../../images/icon.png" width="30" height="30" class="d-inline-block align-top rounded"></a>
+        </div>
+        <div class="col-4 d-flex justify-content-end align-items-center">
+          <a class="btn btn-sm btn-outline-secondary" href="../basic/login.html">注册/登录</a>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <main role="main" class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-pull-4 blog-main ">
+        <h2 class="pb-4 mb-4 font-italic border-bottom">
+          HTML5: <span class="text-muted">An immense improvement of HTML which is a huge step towards the future</span>
+        </h2>
+        <p><span class="text-secondary">June 13, 2019 by </span><a href="#">Emerald</a></p>
+        <div class="blog-post">
+          <div id="abstract">
+            <h3>Abstract</h3>
+            <p class="lead" style="font-family:Times;"><em>HTML5 has contributed to building a new generation of websites with a standardized specification, which provides support to the website to work correctly without additional plugins. This report attempts to compare HTML5 with its predecessor HTML4 in compatibility and utility. At last, HTML5 has acceptable and practical compatibility by its feature of cross-platform, and it also has a prominent utility which can improve user experience and even develop a web application. As the latest version, it is powerful and useful, and it is the future.</em></p>
+          </div>
+          <h3>1. Introduction</h3>
+          <p>In the information age, the Internet becomes increasingly important, and this trend has been already extended in wireless mobile device area. In this process of transition, websites are the indispensable part all the time, they are the most general vehicle used by people, they are programmed by Hypertext Markup Language (<abbr title="HTML">HTML</abbr>), which was developed by World Wide Web Consortium (<abbr title="W3C">W3C</abbr>) and Web Hypertext Application Technology Working Group (<abbr title="WHATWG">WHATWG</abbr>) in 1993 <a href="#Reference">[1]</a>. It has a vast number of versions, and the current major version is HTML5, it not only change the performance of the website on a traditional platform such as PC, but it also contributes to providing the nearly similar service to mobile device platforms such as Android, iOS and Windows Phone.</p>
+          <p>This report attempts to discuss the utility and compatibility of HTML5 distinguished with the older version (HTML4) in different aspects, and present a further consideration about HTML5 in mobile developing. It is divided into few parts. Firstly, the background and the evaluation criteria will be introduced. Then, the operating principles will be described. After that, the evaluation will be given. Finally, the conclusion includes an overall judgment about the improvements degree between the newer and older will be stated.</p>
+          <h3>2. Literature Review</h3>
+          <h4 class="text-muted">2.1 Background</h4>
+          <p>HTML4.0 was published as W3C Recommendation on 24 December 1997. It is a kind of markup language used to build websites. In 1998, the approach provides mechanisms for HTML4, which cause HTML4 can work with style sheets, scripting, embedded objects to develop website. It improved the functionalities of the website, but some function can only achieved by plugins. Moreover, it can work properly on PC platform, but have weak performance on the other platform. With the rapid increase of the mobile user, HTML can not completely satisfy requirements of the users. In this circumstance, W3C intended to establish new generation of HTML. Therefore, HTML5 was published in 2008 and released on 28 October 2014 <a href="#Reference">[1]</a>, it was used to build the new generation of website, The HTML5 is standardized and adapted by the majority of recent versions of browsers <a href="#Reference">[2]</a>, so it has ability to work cross-platform properly. in addition, there are many new elements and APIs (Application Program Interface) added which brought functionalities to website, and it also contribute to web application development.</p>
+          <h4 class="text-muted">2.2 Evaluation Criteria</h4>
+          <p>This report choose two criteria to evaluate HTML5: The compatibility and utility. For the compatibility, websites and web application have more prominent compatibility than an general, because running heavy application in the mobile device is challenging <a href="#Reference">[3]</a>. The compatibility of a website means the ability of accessed by users in various platform. Therefore, the compatibility can determining whether any user can access the website.
+            For the utility of this new standard, it determine whether the website is useful. The website under the new standard can be different. For example, the GIF format was used to display video in the past with limited colour palette and low quality <a href="#Reference">[4]</a>. Moreover, user can not interacted with it such as pause, rewind, speed control <a href="#Reference">[4]</a>. While under the new standard, developers can display video by using HTML5 video format, and user will have different experience from the past. Hence, the utility can be a practical criteria to evaluate the HTML5.</p>
+          <h3>Operating Principles</h3>
+          <p>HTML5 is requested by the HTTP(Hypertext Transfer Protocol), which is the fundamental support of data communication for the World Wide Web. HTML5 work with it, the procedure of it can be divided into a series of operations to exchange information between client and server, as shown in Figure 1.
+          </p>
+          <img src="..." alt="img">
+          <p>There is a fundamental step before that, which aims to establish a connection between the client and the server. In details, the client initiates a TCP connection and use it to send HTTP requests to the server <a href="#Reference">[5]</a>. Next, The sever grants access rights for the available resource to respond to these requests <a href="#Reference">[5]</a>. After that, the web server regards the application as an upgrade request of WebSocket, which is the fundamental element of HTML5 used to provide a lightweight mechanism for communication by using existing HTTP <a href="#Reference">[5]</a>. In this situation, the server responds to the client request and switch to the WebSocket protocol. Then, it sends WebSocket frames to the client.
+          </p>
+          <p>HTML5 can establish a WebSocket to perform tasks by using JavaScript APIs with the support of browser <a href="#Reference">[5]</a>, for example, open, close and communicate over the WebSocket connection. It means the server provides the WebSocket to the client, and the client can receive the WebSocket frame and close WebSocket with the respondent of the server by requesting to it. Additionally, there are some new technique in HTML5. For example, Location-based services, offered support for mobile browsers by a location API <a href="#Reference">[9]</a>.</p>
+          <h3>4. Evaluation</h3>
+          <h4>4.1 Evaluation for Compatibility</h4>
+          <p>Compatibility can judge the programming language whether can be accessed by various device. Like its predecessors, HTML5 is designed to be cross-platform, almost all the modern browsers which are available in the different operating system, for example, Chrome and Firefox, can identify HTML5 web pages efficiently <a href="#Reference">[6]</a>. </p>
+          <p>Although the fact is that HTML4 already has satisfactory compatibility, HTML5 still has a better performance. I It mainly reflected in the mobile device platform, the demand for it is constantly expanding. However, what causes the website developer headache is: It is difficult to achieve the dependable compatibility on various devices under the existing HTML standard, they can not ensure the website on the different devices, platform or OS can completely have the same performance. HTML5 has changed this circumstance as a developer can develop a responsive website, which has multiple solutions to adapt to the different device automatically by the complex logic code. In addition, HTML5 also cause mobile support simpler by being able to cater to the low-powered electronic devices like tablets and smartphones <a href="#Reference">[7]</a>, developers do not need to write the program with the completely same functionalities in multiple programming language, they only need to concentrate on the HTML5 one. It can save time for the developers, and companies can economize the expense used to employ programmers, it can benefit them, especially for the small and medium enterprise. It was difficult to achieve this in HTML4 era. However, HTML5 also have deficiencies backward compatibility, the lower version browser can not access some new elements in HTML5 such as IE9 and the older versions of it, and it can only access complete webpage content if there are codes pre-write to adaptation. Admittedly, there are some deficiencies of HTML5 need to be improved, but it still have better compatibility than HTML4.
+          </p>
+          <h4>4.2 Evaluation for Utility</h4>
+          <p>Utility can determine a programming language whether it is useful. Distinguish from HTML4, HTML5 has an additional way in developing, it has been used to develop mobile applications by its lightweight feature. Its developing process will more friendly to the programmer because that HTML5 is a strictly unified standard has supported to multiple platforms, so only one version with a logic algorithm to give it the ability to handle overflow and exceptions, it will work properly on various platform. Before HTML5, it is might be a problem for the software developer to divide the process into many parts, but now some new API changes the circumstance such as the Location-based services, as Matthew McVickar, a Web developer at Ocupop saying.</p>
+            <blockquote class="blockquote">
+              <p>“HTML5 has a standard JavaScript interface for geolocation so that a Web browser on a mobile device can access GPS data without invoking a GPS device or application”.</p>
+              <footer class="blockquote-footer text-right">
+                M. Jemel and A. Serhrouchni <a href="#Reference">[8]</a> <cite>Security enhancement of HTML5 Local Data Storage</cite>
+              </footer>
+            </blockquote>
+             <p>Benefits from the new APIs, developers do not need to write a separate device and a browser now <a href="#Reference">[8]</a>. Furthermore, various new functional elements are added in HTML5, for example, the Canvas element, which allows for dynamic, scriptable rendering of 2D shapes and bitmap images <a href="#Reference">[9]</a>, this new tags of HTML5 can create 3D shapes and images without using the browser plugin. It is a noteworthy update for a cross-platform language, which can provide a experience improvement for the user, especially for mobile device user. Because it was difficult to display animation or video on the website for a mobile device before HTML5. In the HTML4 era, there are two typical ways. The one is using GIF format, it will reduce the quality, and it is not suitable to record long video by the large storage space usage. The other is using Adobe Flash player, this plugin is high frequency used in display animation and video in the past, even it is still used in a part of the websites nowadays. </p>
+          <p>Nevertheless, it has a weak performance in the mobile device, even there is no support on iOS. However, now the developer can strictly provide the video with new HTML5 element Video. In this way, a website can still work even users do not have a plugin. It is a standard should intend to achieve: Accessing the complete service should not depend on whether there is an additional plugin equipped in the OS. However, there are some limitations in the new HTML5 elements. For example, the Video element was opposed by Adobe, Google and Microsoft by the consideration of video-quality, parent-related and other concerns <a href="#Reference">[9]</a>, HTML5 still need to be improved to satisfy the requirements. Nevertheless, these new elements can improve the user experience and the developing process. Therefore, HTML5 has more practical utility than HTML4.
+          </p>
+          <h3>Conclusion</h3>
+          <p>In conclusion, this report has evaluate the HTML5 based on two chosen criteria: Compatibility and utility.As the latest version of the HTML, HTML5 has more prominent compatibility and utility than HTML4, It can adapt to more operating system, and it can achieve various functionaries without support of plugins. Furthermore, it improves the user experience, especially for mobile device platform. However, there are some limitations in this evaluation. For example,
+          </p>
+          <h3 id="Reference">Reference</h3>
+          <p>[1] W3C (2014, Oct. 28). <em>Open Web Platform Milestone Achieved with HTML5 Recommendation</em> [Online]. Available:<br> <a href="https://www.w3.org/2014/10/html5-rec.html.en">https://www.w3.org/2014/10/html5-rec.html.en</a>
+          <br>[2] M. Jemel and A. Serhrouchni, "Security enhancement of HTML5 Local Data Storage," <em>2014 International Conference and Workshop on the Network of the Future (NOF)</em>, Paris, 2014, pp. 1-2.
+          <br>[3] H. Jeong and S. Moon, "Offloading of Web Application Computations: A Snapshot-Based Approach," <em>2015 IEEE 13th International Conference on Embedded and Ubiquitous Computing</em>, Porto, 2015, pp. 90-97.
+          <br>[4] M. Frandsen and Y. Zhang, "GIF to HTML5 Video -- Optimizing GIF for Modern Browsers," <em>2014 11th Web Information System and Application Conference</em>, Tianjin, 2014, pp. 75-78.
+          <br>[5] (2018, Aug. 9). <em>How HTML5 Works</em> [Online]. Available:<br><a href="https://docs.citrix.com/en-us/citrix-sd-wan-wanop/10-1/how-html5-works.html">https://docs.citrix.com/en-us/citrix-sd-wan-wanop/10-1/how-html5-works.html</a>
+          <br>[6] M. Pilgrim, <em>HTML5: Up and Running: Dive into the Future of Web Development</em>, Sebastopol: O'Reilly Media, Inc, 2010.
+          <br>[7] S. Y. Choi and H. Y. Lee, "Toward Automated Scanning for Code Injection Vulnerabilities in HTML5-Based Mobile Apps," <em>2016 International Conference on Software Security and Assurance (ICSSA)</em>, St. Polten, 2016, pp. 24-24.
+          <br>[8] (2012, Jul. 1 ). <em>HTML leads a Web Revolution</em> [Online]. Available:<br><a href="https://cacm.acm.org/magazines/2012/7/151236-html5-leads-a-web-revolution/fulltext">https://cacm.acm.org/magazines/2012/7/151236-html5-leads-a-web-revolution/fulltext</a> 
+          <br>[9] (2019, Mar. 3 ). <em>Google Tweaks Developer Tools, App Engine SDK</em> [Online]. Available:<br> <a href="https://www.eweek.com/development/google-tweaks-developer-tools-app-engine-sdk">https://www.eweek.com/development/google-tweaks-developer-tools-app-engine-sdk</a>
+          </p>
+        </div>
+      </div>
+      <aside class="col-md-4 blog-sidebar">
+        <div class="p-4 mb-3 bg-light rounded">
+          <h4 class="font-italic">简介</h4>
+          <p class="mb-0"><em>HTML5为建立具有标准化规范的新一代网站做出了贡献，该规范助力于网站在无需额外插件的情况下正常运行。本报告意图在兼容性和实用性方面以HTML5与其先前的版本HTML4做对比。HTML5通过其跨平台的特性，具有可观的实际兼容性，且具备良好的实用性可改善用户体验，甚至用于开发Web应用程序。作为最新版本，它足够支持和引领未来的开发与发展。</em></p>
+        </div>
+        <div class="p-4">
+          <h4 class="font-italic">相关阅读<span class="text-muted"> <small>Further Reading</small></span></h4>
+          <ol class="list-unstyled mb-0">
+            <li>暂无</li>
+          </ol>
+        </div>
+
+        <div class="p-4">
+          <h4 class="font-italic">其他<span class="text-muted"> <small>Others</small></span></h4>
+          <ol class="list-unstyled">
+            <li><a href="log.html">版本更新日志</a></li>
+            <li><a href="whyBro.html">Why Brotherhood</a></li>
+            <li><a href="HTML5.html">HTML5: An immense improvement...</a></li>
+            <li><a href="../more/jiuzhe.html">就这?.html</a></li>
+          </ol>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="container">
+    <p class="float-right"><a href="#">返回顶部</a></p>
+    <p>&copy; 2013-2020 Magic Brotherhood &middot;</p>
+  </footer>
+<script src="../../javascript/jquery.min.js"></script>
+<script src="../../javascript/jquery.magnific-popup.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.0.4/js/bootstrap-scrollspy.js"></script>
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
