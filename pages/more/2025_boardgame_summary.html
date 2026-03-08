@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 我们的桌游奇妙历险 - 年终总结</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap');
+        
+        body {
+            font-family: 'Nunito', 'Microsoft YaHei', sans-serif;
+            background-color: #fdf6e3;
+            color: #4a4a4a;
+        }
+
+        .summary-container {
+            max-width: 650px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+
+        .cute-border {
+            border: 4px dashed #ffb6b9;
+            border-radius: 24px;
+        }
+        
+        .cute-border-blue {
+            border: 4px dashed #88d8b0;
+            border-radius: 24px;
+        }
+
+        /* 动画系列 */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+        .floating { animation: float 3s ease-in-out infinite; }
+        
+        @keyframes roll {
+            0% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(180deg) scale(1.1); }
+            100% { transform: rotate(360deg) scale(1); }
+        }
+        .rolling:hover { animation: roll 0.6s ease-in-out; }
+
+        .card-shadow {
+            box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        .card-shadow:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px -3px rgba(0, 0, 0, 0.12);
+        }
+
+        /* 自定义滚动条 */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #ffb6b9; border-radius: 10px; }
+
+        /* Loader */
+        .loader {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #ff9a9e;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        
+        /* 柱状图动画 */
+        .bar-grow {
+            transform-origin: bottom;
+            animation: growUp 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+        @keyframes growUp {
+            from { transform: scaleY(0); }
+            to { transform: scaleY(1); }
+        }
+        
+        /* 相爱相杀头像统一基础样式 */
+        .vs-avatar {
+            width: 2.5rem;
+            height: 2.5rem;
+            background-color: white;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            margin: 0 auto;
+        }
+        .vs-avatar-sm {
+            width: 2rem;
+            height: 2rem;
+            background-color: white;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.75rem;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body class="py-6 sm:py-10 bg-[#fdf6e3]">
+
+<div class="summary-container rounded-[2.5rem] relative pb-10">
+    <!-- Header 封面图区 -->
+    <div class="relative w-full h-80 bg-gradient-to-br from-[#ff9a9e] to-[#fecfef] flex flex-col items-center justify-center text-white overflow-hidden rounded-t-[2.5rem]">
+        <div class="absolute opacity-30 text-[6rem] -top-6 -left-4 floating">🎲</div>
+        <div class="absolute opacity-30 text-[5rem] bottom-8 -right-6 floating" style="animation-delay: 1s;">♟️</div>
+        <div class="absolute opacity-20 text-[4rem] top-12 right-20 floating" style="animation-delay: 2s;">🃏</div>
+        
+        <h3 class="text-xl font-bold tracking-widest uppercase opacity-90 mb-2 drop-shadow-sm">2025 年终大赏</h3>
+        <h1 class="text-4xl md:text-5xl font-black text-center leading-tight drop-shadow-md z-10">
+            我们的桌游<br>奇妙历险记 🌟
+        </h1>
+        <p class="mt-4 text-sm bg-white/30 px-5 py-1.5 rounded-full backdrop-blur-sm shadow-sm z-10 font-bold">
+            致敬每一场永不落幕的欢笑
+        </p>
+    </div>
+
+    <!-- Data Highlights 核心数据 -->
+    <div class="px-6 -mt-8 z-20 relative">
+        <div class="bg-white rounded-3xl shadow-lg p-6 flex flex-col space-y-4 border-b-4 border-r-4 border-gray-100">
+            <div class="flex justify-around items-center">
+                <div class="text-center w-1/3">
+                    <p class="text-gray-400 text-xs font-bold uppercase tracking-wider">总对局</p>
+                    <p class="text-3xl font-black text-[#88d8b0] mt-1">55<span class="text-lg">+</span></p>
+                    <p class="text-[10px] text-gray-400">场脑力激荡</p>
+                </div>
+                <div class="w-px h-12 bg-gray-100"></div>
+                <div class="text-center w-1/3">
+                    <p class="text-gray-400 text-xs font-bold uppercase tracking-wider">体验游戏</p>
+                    <p class="text-3xl font-black text-[#ff9a9e] mt-1 rolling">20<span class="text-lg">+</span></p>
+                    <p class="text-[10px] text-gray-400">款奇妙宇宙</p>
+                </div>
+                <div class="w-px h-12 bg-gray-100"></div>
+                <div class="text-center w-1/3">
+                    <p class="text-gray-400 text-xs font-bold uppercase tracking-wider">常驻玩家</p>
+                    <p class="text-3xl font-black text-[#ffcc5c] mt-1">10</p>
+                    <p class="text-[10px] text-gray-400">位有趣灵魂</p>
+                </div>
+            </div>
+            
+            <!-- 难度偏好条 -->
+            <div class="pt-3 border-t border-dashed border-gray-200">
+                <div class="flex justify-between text-[10px] font-bold text-gray-400 mb-1">
+                    <span>游戏难度偏好雷达</span>
+                    <span>脑细胞燃烧度 🔥</span>
+                </div>
+                <div class="w-full h-3 flex rounded-full overflow-hidden shadow-inner">
+                    <div class="bg-green-300 w-[15%]" title="毛线游戏"></div>
+                    <div class="bg-blue-300 w-[40%]" title="轻度策略"></div>
+                    <div class="bg-yellow-400 w-[35%]" title="中度策略"></div>
+                    <div class="bg-red-400 w-[10%]" title="重度策略"></div>
+                </div>
+                <div class="flex justify-between text-[10px] text-gray-500 mt-1 px-1">
+                    <span class="text-green-600 font-bold">● 毛线</span>
+                    <span class="text-blue-600 font-bold">● 轻策</span>
+                    <span class="text-yellow-600 font-bold">● 中策</span>
+                    <span class="text-red-500 font-bold">● 重策</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ✨ 探险家图鉴 (领奖台 + 网格排版) -->
+    <div class="px-6 mt-12">
+        <div class="text-center mb-16">
+            <h2 class="text-2xl font-black text-gray-800">✨ 桌游探险家图鉴</h2>
+            <p class="text-sm text-gray-500 mt-1">前三名荣誉登顶，后面的桌友同样闪耀</p>
+        </div>
+
+        <!-- 冠亚季军领奖台 (修复遮挡问题) -->
+        <div class="flex items-end justify-center gap-2 mb-8 h-48 px-2">
+            <!-- 亚军 -->
+            <div class="w-1/3 flex flex-col items-center relative z-20">
+                <div class="bg-gray-100 rounded-full w-14 h-14 flex items-center justify-center text-2xl shadow-inner mb-2 border-2 border-gray-300 floating" style="animation-delay: 0.2s;">🥈</div>
+                <div class="font-black text-gray-700 text-lg bg-white/80 px-2 rounded-lg backdrop-blur-sm">CC</div>
+                <div class="text-xs text-gray-600 font-bold bg-white/80 px-2 rounded-lg mb-1">31.4%(17胜/54场)</div>
+                <div class="w-full bg-gradient-to-t from-gray-300 to-gray-100 h-20 rounded-t-xl shadow-md border-t-4 border-gray-400 flex justify-center pt-2 font-black text-gray-400">2</div>
+            </div>
+            
+            <!-- 冠军 -->
+            <div class="w-1/3 flex flex-col items-center relative z-30">
+                <div class="text-3xl mb-[-10px] z-20 floating">👑</div>
+                <div class="bg-yellow-50 rounded-full w-16 h-16 flex items-center justify-center text-3xl shadow-inner mb-2 border-4 border-yellow-400">🥇</div>
+                <div class="font-black text-yellow-600 text-xl bg-white/80 px-2 rounded-lg backdrop-blur-sm shadow-sm">永健</div>
+                <div class="text-xs text-yellow-600 font-bold bg-white/80 px-2 rounded-lg mb-1 shadow-sm">33.3%(18胜/54场)</div>
+                <div class="w-full bg-gradient-to-t from-yellow-300 to-yellow-100 h-28 rounded-t-xl shadow-lg border-t-4 border-yellow-400 flex justify-center pt-2 font-black text-yellow-500">1</div>
+            </div>
+            
+            <!-- 季军 -->
+            <div class="w-1/3 flex flex-col items-center relative z-20">
+                <div class="bg-orange-50 rounded-full w-14 h-14 flex items-center justify-center text-2xl shadow-inner mb-2 border-2 border-orange-300 floating" style="animation-delay: 0.4s;">🥉</div>
+                <div class="font-black text-orange-600 text-lg bg-white/80 px-2 rounded-lg backdrop-blur-sm">海林</div>
+                <div class="text-xs text-orange-600 font-bold bg-white/80 px-2 rounded-lg mb-1">31.3%(16胜/54场)</div>
+                <div class="w-full bg-gradient-to-t from-orange-300 to-orange-100 h-16 rounded-t-xl shadow-md border-t-4 border-orange-400 flex justify-center pt-2 font-black text-orange-400">3</div>
+            </div>
+        </div>
+
+        <!-- 其他玩家：三列网格样式 -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
+            <!-- 其他玩家卡片 -->
+            <div class="bg-white rounded-2xl p-3 border border-gray-100 card-shadow">
+                <p class="font-bold text-gray-700">菲菲</p>
+                <div class="mt-2 flex items-end justify-between">
+                    <span class="text-lg font-bold text-indigo-400">27%</span>
+                    <span class="text-[10px] text-gray-400 bg-gray-50 px-1.5 py-0.5 rounded">10胜/37场</span>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-3 border border-gray-100 card-shadow">
+                <p class="font-bold text-gray-700">秋屿</p>
+                <div class="mt-2 flex items-end justify-between">
+                    <span class="text-lg font-bold text-emerald-500">25%</span>
+                    <span class="text-[10px] text-gray-400 bg-gray-50 px-1.5 py-0.5 rounded">3胜/12场</span>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-3 border border-gray-100 card-shadow">
+                <p class="font-bold text-gray-700">晗总</p>
+                <div class="mt-2 flex items-end justify-between">
+                    <span class="text-lg font-bold text-fuchsia-400">7.6%</span>
+                    <span class="text-[10px] text-gray-400 bg-gray-50 px-1.5 py-0.5 rounded">1胜/13场</span>
+                </div>
+            </div>
+
+            <!-- 金平：专属青柠绿 -->
+            <div class="bg-white rounded-2xl p-3 border border-gray-100 card-shadow">
+                <p class="font-bold text-gray-700">金平</p>
+                <div class="mt-2 flex items-end justify-between">
+                    <span class="text-lg font-bold text-lime-500">参与满分</span>
+                    <span class="text-[10px] text-gray-400 bg-gray-50 px-1.5 py-0.5 rounded">0胜/5场</span>
+                </div>
+            </div>
+
+            <!-- 菲菲妹妹：保持原有 teal-400 -->
+            <div class="bg-white rounded-2xl p-3 border border-gray-100 card-shadow">
+                <p class="font-bold text-gray-700">菲菲妹妹</p>
+                <div class="mt-2 flex items-end justify-between">
+                    <span class="text-lg font-bold text-teal-400">展翅翱翔</span>
+                    <span class="text-[10px] text-gray-400 bg-gray-50 px-1.5 py-0.5 rounded">0胜/5场</span>
+                </div>
+            </div>
+
+            <!-- 白桑：专属薰衣草紫 -->
+            <div class="bg-white rounded-2xl p-3 border border-gray-100 card-shadow">
+                <p class="font-bold text-gray-700">白桑</p>
+                <div class="mt-2 flex items-end justify-between">
+                    <span class="text-lg font-bold text-violet-400">主打陪伴</span>
+                    <span class="text-[10px] text-gray-400 bg-gray-50 px-1.5 py-0.5 rounded">0胜/3场</span>
+                </div>
+            </div>
+
+            <!-- 夏伟：专属薄荷青 -->
+            <div class="bg-white rounded-2xl p-3 border border-gray-100 card-shadow">
+                <p class="font-bold text-gray-700">夏伟</p>
+                <div class="mt-2 flex items-end justify-between">
+                    <span class="text-lg font-bold text-cyan-500">重在参与</span>
+                    <span class="text-[10px] text-gray-400 bg-gray-50 px-1.5 py-0.5 rounded">0胜/2场</span>
+                </div>
+            </div>
+
+            <!-- 天宇哥哥：专属亮橙 -->
+            <div class="bg-white rounded-2xl p-3 border border-gray-100 card-shadow">
+                <p class="font-bold text-gray-700">天宇哥哥</p>
+                <div class="mt-2 flex items-end justify-between">
+                    <span class="text-lg font-bold text-orange-400">限定英雄</span>
+                    <span class="text-[10px] text-gray-400 bg-gray-50 px-1.5 py-0.5 rounded">0胜/2场</span>
+                </div>
+            </div>
+            
+            <!-- 牢弟：专属暖棕 -->
+            <div class="bg-white rounded-2xl p-3 border border-gray-100 card-shadow">
+                <p class="font-bold text-gray-700">牢弟</p>
+                <div class="mt-2 flex items-end justify-between">
+                    <span class="text-lg font-bold text-amber-700">体验拉满</span>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl p-3 border border-gray-100 card-shadow sm:col-start-2">
+                <p class="font-bold text-gray-700">靓姐</p>
+                <div class="mt-2 flex items-end justify-between">
+                    <span class="text-lg font-bold text-rose-400">全新英雄</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 📅 新增模块：开局生物钟 (日期可视化) -->
+        <div class="bg-white rounded-3xl p-5 border-2 border-[#ffcc5c] card-shadow relative overflow-hidden">
+            <div class="absolute -right-4 -top-4 text-6xl opacity-10">⏱️</div>
+            <h3 class="font-black text-[#ffcc5c] text-lg mb-1">📅 我们的开局生物钟</h3>
+            <p class="text-xs text-gray-500 font-bold mb-4">时间会溜走，但桌游记录了我们的疯狂！</p>
+
+            <div class="grid grid-cols-2 gap-4">
+                <!-- 周末 vs 工作日 -->
+                <div class="bg-yellow-50 rounded-xl p-3 border border-yellow-100">
+                    <div class="text-[10px] font-bold text-gray-400 uppercase">工作日 vs 周末</div>
+                    <div class="flex items-end gap-1 mt-1 mb-1">
+                        <span class="text-xl font-black text-yellow-600">74%</span>
+                        <span class="text-xs text-yellow-500 font-bold mb-1">都在周末嗨</span>
+                    </div>
+                    <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden flex">
+                        <div class="bg-blue-300 w-[25%]" title="工作日 14场"></div>
+                        <div class="bg-yellow-400 w-[75%]" title="周末 41场"></div>
+                    </div>
+                    <div class="text-[9px] text-gray-500 mt-1 flex justify-between">
+                        <span>👔 14场</span>
+                        <span>🎉 41场</span>
+                    </div>
+                </div>
+
+                <!-- 爆肝纪录日 -->
+                <div class="bg-red-50 rounded-xl p-3 border border-red-100">
+                    <div class="text-[10px] font-bold text-gray-400 uppercase">🔥 爆肝巅峰之日</div>
+                    <div class="mt-1">
+                        <div class="font-black text-red-500 text-lg">1月19日</div>
+                        <div class="text-xs text-red-400 font-bold">单日怒开 <span class="text-lg">5</span> 场！</div>
+                        <div class="text-[9px] text-gray-500 mt-1">其次是 3月16日 (4场)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 星期柱状图 (纯CSS可视化) -->
+            <div class="mt-5">
+                <div class="text-[10px] font-bold text-gray-400 mb-2 uppercase text-center">周日综合征的唯一解药：开桌游！</div>
+                <div class="flex items-end justify-between h-20 gap-1 px-2">
+                    <div class="w-full flex flex-col items-center group">
+                        <span class="text-[9px] font-bold text-gray-400 mb-1 opacity-0 group-hover:opacity-100 transition-opacity">5场</span>
+                        <div class="w-full bg-blue-200 rounded-t-md bar-grow" style="height: 20%;"></div>
+                        <span class="text-[10px] text-gray-500 mt-1 font-bold">一</span>
+                    </div>
+                    <div class="w-full flex flex-col items-center group">
+                        <span class="text-[9px] font-bold text-gray-400 mb-1 opacity-0 group-hover:opacity-100 transition-opacity">2场</span>
+                        <div class="w-full bg-blue-100 rounded-t-md bar-grow" style="height: 8%;"></div>
+                        <span class="text-[10px] text-gray-500 mt-1 font-bold">二</span>
+                    </div>
+                    <div class="w-full flex flex-col items-center group">
+                        <span class="text-[9px] font-bold text-gray-400 mb-1 opacity-0 group-hover:opacity-100 transition-opacity">5场</span>
+                        <div class="w-full bg-blue-200 rounded-t-md bar-grow" style="height: 20%;"></div>
+                        <span class="text-[10px] text-gray-500 mt-1 font-bold">三</span>
+                    </div>
+                    <div class="w-full flex flex-col items-center group">
+                        <span class="text-[9px] font-bold text-gray-400 mb-1 opacity-0 group-hover:opacity-100 transition-opacity">0场</span>
+                        <div class="w-full bg-gray-100 rounded-t-md bar-grow" style="height: 2%;"></div>
+                        <span class="text-[10px] text-gray-500 mt-1 font-bold">四</span>
+                    </div>
+                    <div class="w-full flex flex-col items-center group">
+                        <span class="text-[9px] font-bold text-gray-400 mb-1 opacity-0 group-hover:opacity-100 transition-opacity">7场</span>
+                        <div class="w-full bg-purple-200 rounded-t-md bar-grow" style="height: 29%;"></div>
+                        <span class="text-[10px] text-gray-500 mt-1 font-bold">五</span>
+                    </div>
+                    <div class="w-full flex flex-col items-center group">
+                        <span class="text-[9px] font-bold text-orange-400 mb-1">12场</span>
+                        <div class="w-full bg-orange-300 rounded-t-md bar-grow" style="height: 50%;"></div>
+                        <span class="text-[10px] text-orange-500 mt-1 font-bold">六</span>
+                    </div>
+                    <div class="w-full flex flex-col items-center group">
+                        <span class="text-[10px] font-black text-red-500 mb-1">24场</span>
+                        <div class="w-full bg-red-400 rounded-t-md bar-grow relative" style="height: 100%;">
+                            <div class="absolute -top-3 -right-2 text-sm">🔥</div>
+                        </div>
+                        <span class="text-[10px] text-red-500 mt-1 font-black">日</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 🎄 平安夜桌游记录 -->
+            <div class="mt-4 bg-green-50 rounded-xl p-3 border border-green-100 relative overflow-hidden">
+                <div class="absolute -right-3 -top-3 text-4xl opacity-10">🎄</div>
+                <div class="text-[10px] font-bold text-gray-400 uppercase mb-2">🎅 节日限定：平安夜桌游夜</div>
+                <div class="flex items-center gap-2">
+                    <div class="bg-red-100 rounded-full p-2">🔔</div>
+                    <div>
+                        <div class="font-black text-red-500 text-sm">12月24日</div>
+                        <div class="text-xs text-green-500 font-bold">Christmas Eve，桌游才是最佳彩蛋</div>
+                        <div class="text-[9px] text-gray-500 mt-1">平安夜的美好，藏在桌游与Cheers的瞬间里</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 🌸 爆肝旺季可视化 -->
+            <div class="mt-4 pt-3 border-t border-dashed border-yellow-200">
+                <div class="text-[10px] font-bold text-gray-400 uppercase mb-3 text-center">🌸 爆肝旺季排行榜</div>
+                <div class="bg-gradient-to-r from-pink-50 to-purple-50 rounded-xl p-3 border border-pink-100">
+                    <!-- 3月 -->
+                    <div class="mb-3">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="text-xs font-black text-pink-500">3月</span>
+                            <span class="text-xs font-bold text-purple-500">11场</span>
+                        </div>
+                        <div class="w-full h-3 bg-gray-100 rounded-full overflow-hidden">
+                            <div class="bg-gradient-to-r from-pink-400 to-purple-400 h-full rounded-full bar-grow" style="width: 100%;" title="3月 11场">
+                                <div class="absolute right-0 top-1/2 transform -translate-y-1/2 text-[8px] text-white font-bold mr-1">🏆</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4月 -->
+                    <div>
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="text-xs font-bold text-pink-400">4月</span>
+                            <span class="text-xs font-bold text-purple-400">8场</span>
+                        </div>
+                        <div class="w-full h-3 bg-gray-100 rounded-full overflow-hidden">
+                            <div class="bg-gradient-to-r from-pink-300 to-purple-300 h-full rounded-full bar-grow" style="width: 73%;" title="4月 8场">
+                                <div class="absolute right-0 top-1/2 transform -translate-y-1/2 text-[8px] text-white font-bold mr-1">🥈</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 说明文字 -->
+                    <div class="mt-2 text-center text-[9px] text-gray-500 font-bold">
+                        🌸 人间三月芳菲始，一席桌游尽清欢 ✨
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ✨ 恢复的栏目：灵魂玩家大赏 -->
+    <div class="px-6 mt-14">
+        <div class="text-center mb-6">
+            <h2 class="text-2xl font-black text-[#ff9a9e]">🏆 2025 灵魂玩家大赏</h2>
+            <p class="text-[12px] text-gray-500 mt-1">颁奖啦，颁完你的颁你的。</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- 奖项 1: 永健 - 年度胜率王 -->
+            <div class="bg-gradient-to-br from-amber-50 to-white rounded-2xl p-4 border border-yellow-100 card-shadow relative">
+                <div class="absolute top-2 right-2 text-2xl">🏝️</div>
+                <div class="text-xs font-black text-yellow-400 mb-1 tracking-wider uppercase">绝命岛最惨受害者</div>
+                <div class="font-black text-gray-800 text-lg mb-1">永健</div>
+                <p class="text-[11px] text-gray-500 font-bold">
+                    胜率王者也有专属滑铁卢，纵有千般策略，纵使日夜难寐，依旧逃不出这座绝命岛。
+                </p>
+            </div>
+            
+            <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-4 border border-blue-100 card-shadow relative">
+                <div class="absolute top-2 right-2 text-2xl">🚀</div>
+                <div class="text-xs font-black text-blue-400 mb-1 tracking-wider uppercase">全勤核心双子星</div>
+                <div class="font-black text-gray-800 text-lg mb-1">CC & 永健</div>
+                <p class="text-[11px] text-gray-500 font-bold">
+                    参与54次对局，参团率高达98.18%，局局必到、从不缺席，是我们最稳的桌游基石。
+                </p>
+            </div>
+
+            <!-- 奖项 3: 海林 - 铁路环游狂热粉 -->
+            <div class="bg-gradient-to-br from-green-50 to-white rounded-2xl p-4 border border-green-100 card-shadow relative">
+                <div class="absolute top-2 right-2 text-2xl">🚂</div>
+                <div class="text-xs font-black text-green-400 mb-1 tracking-wider uppercase">铁路环游不败传奇</div>
+                <div class="font-black text-gray-800 text-lg mb-1">海林</div>
+                <p class="text-[11px] text-gray-500 font-bold">
+                    纵横欧洲铁路，称霸美国荒野，在两大版图皆具绝对统治力。2025年美国背景铁路环游分段赛胜率100%，是当之无愧的不败车神。
+                </p>
+            </div>
+
+            <!-- 奖项 4: 菲菲 - 精准卡人王 -->
+            <div class="bg-gradient-to-br from-red-50 to-white rounded-2xl p-4 border border-red-100 card-shadow relative">
+                <div class="absolute top-2 right-2 text-2xl">💎</div>
+                <div class="text-xs font-black text-red-400 mb-1 tracking-wider uppercase">璀璨宝石的至高守望者</div>
+                <div class="font-black text-gray-800 text-lg mb-1">菲菲</div>
+                <p class="text-[11px] text-gray-500 font-bold">
+                    2025年璀璨宝石胜率75%，以断层式优势碾压第二名40%胜率，在宝石领域拥有绝对统治力。
+                </p>
+            </div>
+
+            <!-- 奖项 5: 晗总 - 高频率参与者 -->
+            <div class="bg-gradient-to-br from-purple-50 to-white rounded-2xl p-4 border border-purple-100 card-shadow relative">
+                <div class="absolute top-2 right-2 text-2xl">🚫</div>
+                <div class="text-xs font-black text-purple-400 mb-1 tracking-wider uppercase">波多黎各PTSD患者</div>
+                <div class="font-black text-gray-800 text-lg mb-1">晗总</div>
+                <p class="text-[11px] text-gray-500 font-bold">
+                    “可恶的波多黎各”。
+                </p>
+            </div>
+
+            <!-- 奖项 6: 秋屿 - 年度黑马 -->
+            <div class="bg-gradient-to-br from-pink-50 to-white rounded-2xl p-4 border border-pink-100 card-shadow relative">
+                <div class="absolute top-2 right-2 text-2xl">🏭</div>
+                <div class="text-xs font-black text-pink-400 mb-1 tracking-wider uppercase">伯明翰带资本家</div>
+                <div class="font-black text-gray-800 text-lg mb-1">秋屿</div>
+                <p class="text-[11px] text-gray-500 font-bold">
+                    她的事迹无人不知，她的财富无人不晓，回合收入稳定30+，凭垄断资源成为伯明翰传说级奸商。
+                </p>
+            </div>
+
+            <!-- 奖项 7: 金平 - 快乐氛围组 -->
+            <div class="bg-gradient-to-br from-yellow-50 to-white rounded-2xl p-4 border border-yellow-100 card-shadow relative">
+                <div class="absolute top-2 right-2 text-2xl">😊</div>
+                <div class="text-xs font-black text-yellow-400 mb-1 tracking-wider uppercase">快乐氛围组</div>
+                <div class="font-black text-gray-800 text-lg mb-1">金平</div>
+                <p class="text-[11px] text-gray-500 font-bold">
+                    他来的时候他笑嘻了，然后菲菲也笑嘻了，然后他又笑菲菲笑嘻了，菲菲又笑他笑嘻了...
+                </p>
+            </div>
+
+            <!-- 奖项 8: 菲菲妹妹 - 温柔玩家 -->
+            <div class="bg-gradient-to-br from-rose-50 to-white rounded-2xl p-4 border border-rose-100 card-shadow relative">
+                <div class="absolute top-2 right-2 text-2xl">🐦</div>
+                <div class="text-xs font-black text-rose-400 mb-1 tracking-wider uppercase">神级育雏师</div>
+                <div class="font-black text-gray-800 text-lg mb-1">菲菲妹妹</div>
+                <p class="text-[11px] text-gray-500 font-bold">
+                    对《展翅翱翔》情有独钟，全场专注下蛋，累计产出30+枚鸟蛋，用实力诠释什么叫真正的孵化之王！
+                </p>
+            </div>
+
+            <!-- 奖项 9: 白桑 - 平安夜特别嘉宾 -->
+            <div class="bg-gradient-to-br from-teal-50 to-white rounded-2xl p-4 border border-teal-100 card-shadow relative">
+                <div class="absolute top-2 right-2 text-2xl">🌍</div>
+                <div class="text-xs font-black text-teal-400 mb-1 tracking-wider uppercase">新晋传奇冒险家</div>
+                <div class="font-black text-gray-800 text-lg mb-1">白桑</div>
+                <p class="text-[11px] text-gray-500 font-bold">
+                    她踏遍《世界奇旅》的每一寸山河，亦在《破产边缘动画社》里以一己之力挽狂澜于既倒，让濒临落幕的故事重新发光。新的一年，且看她续写更多温柔与传奇。
+                </p>
+            </div>
+
+            <!-- 奖项 10: 天宇哥哥 - 神秘玩家 -->
+            <div class="bg-gradient-to-br from-indigo-50 to-white rounded-2xl p-4 border border-indigo-100 card-shadow relative">
+                <div class="absolute top-2 right-2 text-2xl">✨</div>
+                <div class="text-xs font-black text-indigo-400 mb-1 tracking-wider uppercase">神秘玩家</div>
+                <div class="font-black text-gray-800 text-lg mb-1">天宇哥哥</div>
+                <p class="text-[11px] text-gray-500 font-bold">
+                    参与2次对局，神秘莫测！下次来又是什么时候呢？
+                </p>
+            </div>
+
+            <!-- 奖项 11: 夏伟 - 全能型玩家 -->
+            <div class="bg-gradient-to-br from-orange-50 to-white rounded-2xl p-4 border border-orange-100 card-shadow relative">
+                <div class="absolute top-2 right-2 text-2xl">⚡</div>
+                <div class="text-xs font-black text-orange-400 mb-1 tracking-wider uppercase">最强新人黑马</div>
+                <div class="font-black text-gray-800 text-lg mb-1">夏伟</div>
+                <p class="text-[11px] text-gray-500 font-bold">
+                    仅登场一次，便以惊艳实力力压一众老牌强者。两款初次接触的游戏，都险些登顶夺冠，天赋与实力一览无遗。
+                </p>
+            </div>
+
+            <div class="bg-gradient-to-br from-teal-50 to-white rounded-2xl p-4 border border-orange-100 card-shadow relative">
+                <div class="absolute top-2 right-2 text-2xl">🌿</div>
+                <div class="text-xs font-black text-teal-400 mb-1 tracking-wider uppercase">永恒之谷不屈战神</div>
+                <div class="font-black text-gray-800 text-lg mb-1">牢弟</div>
+                <p class="text-[11px] text-gray-500 font-bold">
+                    虽在永恒之谷遭遇最大低谷，从榜首被坑至末流，却依旧百折不挠。我去lyj怎么这么坏啊😡？
+                </p>
+            </div>
+            
+            <div class="bg-gradient-to-br from-teal-50 to-white rounded-2xl p-4 border border-orange-100 card-shadow relative">
+                <div class="absolute top-2 right-2 text-2xl">🐒</div>
+                <div class="text-xs font-black text-teal-400 mb-1 tracking-wider uppercase">传奇灵长类饲养员</div>
+                <div class="font-black text-gray-800 text-lg mb-1">靓姐</div>
+                <p class="text-[11px] text-gray-500 font-bold">
+                   牢弟本身可以评价为铁好人，直到牢弟在隔壁动物园养了最关键的一只猴。
+                </p>
+            </div>            
+
+        </div>
+    </div>
+
+    <!-- ✨✨ 年度相爱相杀榜 (全系 SVG 概率标注版) ✨✨ -->
+    <div class="px-6 mt-14">
+        <div class="text-center mb-8">
+            <h2 class="text-2xl font-black text-[#ff9a9e] tracking-wide">⚔️ 年度相爱相杀榜</h2>
+            <p class="text-xs text-gray-500 mt-1">没有永远的敌人，只有下局一定要卡你的损友</p>
+        </div>
+
+        <div class="space-y-6">
+            
+            <!-- 链条 1：食物链流向图 (SVG 高精度树状流) -->
+            <div class="bg-blue-50/50 rounded-[2rem] p-5 border-2 border-blue-100 card-shadow">
+                <div class="text-center mb-2">
+                    <h3 class="font-black text-blue-500 text-sm tracking-widest uppercase">⛓️ 主要克制链</h3>
+                    <p class="text-[10px] text-gray-400 mt-1">天下苦恶久矣，双人齐心协力逮捕大恶霸</p>
+                </div>
+                
+                <div class="relative w-full overflow-visible" style="padding-top: 85%;">
+                    <svg viewBox="0 0 320 280" class="absolute top-0 left-0 w-full h-full font-sans">
+                        <defs>
+                            <!-- 个人专属箭头标记 -->
+                            <marker id="arrow-cc-c1" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+                                <path d="M 0 0 L 10 5 L 0 10 z" fill="#3b82f6"/>
+                            </marker>
+                            <marker id="arrow-feifei-c1" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+                                <path d="M 0 0 L 10 5 L 0 10 z" fill="#8b5cf6"/>
+                            </marker>
+                            <marker id="arrow-yongjian-c1" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+                                <path d="M 0 0 L 10 5 L 0 10 z" fill="#ef4444"/>
+                            </marker>
+                        </defs>
+
+                        <!-- 上半部分：CC和菲菲合力指向永健 -->
+                        <!-- CC 连线 (从 X=100 到中心 X=160) -->
+                        <path d="M 100 65 L 100 75 Q 100 80 105 80 L 160 80" fill="none" stroke="#93c5fd" stroke-width="2" stroke-dasharray="4,2" />
+                        <!-- CC 概率标注 -->
+                        <text x="125" y="76" fill="#3b82f6" font-size="8" font-weight="bold" text-anchor="middle">45.28% (24/53)</text>
+
+                        <!-- 菲菲 连线 (从 X=220 到中心 X=160) -->
+                        <path d="M 220 65 L 220 75 Q 220 80 215 80 L 160 80" fill="none" stroke="#c4b5fd" stroke-width="2" stroke-dasharray="4,2" />
+                        <!-- 菲菲 概率标注 -->
+                        <text x="195" y="76" fill="#8b5cf6" font-size="8" font-weight="bold" text-anchor="middle">44.44% (16/36)</text>
+
+                        <!-- 汇合向下 -->
+                        <path d="M 160 80 L 160 100" fill="none" stroke="#ef4444" stroke-width="2.5" marker-end="url(#arrow-yongjian-c1)" />
+                        <!-- 合力标签 -->
+                        <rect x="136" y="83" width="48" height="14" fill="white" rx="4" stroke="#fca5a5" stroke-width="1"/>
+                        <text x="160" y="93" fill="#ef4444" font-size="7" font-weight="bold" text-anchor="middle">合力集火</text>
+
+                        <!-- 下半部分：永健降维打击 -->
+                        <!-- 主干道 -->
+                        <path d="M 160 165 L 160 185" fill="none" stroke="#fecaca" stroke-width="2" stroke-dasharray="4,2" />
+                        <rect x="136" y="167" width="48" height="14" fill="white" rx="4" stroke="#fecaca" stroke-width="1"/>
+                        <text x="160" y="177" fill="#ef4444" font-size="7" font-weight="bold" text-anchor="middle">大批量卡人</text>
+
+                        <!-- 横向分发线 -->
+                        <path d="M 60 193 L 240 193" fill="none" stroke="#fecaca" stroke-width="2" stroke-dasharray="4,2" />
+                        
+                        <!-- 4条向下的波及线带概率 -->
+                        <!-- 晗总 -->
+                        <path d="M 60 193 L 60 210" fill="none" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow-yongjian-c1)" />
+                        <text x="60" y="190" fill="#ef4444" font-size="8" font-weight="bold" text-anchor="middle">76.92% (10/13)</text>
+                        <!-- 金平 -->
+                        <path d="M 120 193 L 120 210" fill="none" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow-yongjian-c1)" />
+                        <text x="120" y="190" fill="#ef4444" font-size="8" font-weight="bold" text-anchor="middle">80.00% (4/5)</text>
+                        <!-- 秋屿 -->
+                        <path d="M 180 193 L 180 210" fill="none" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow-yongjian-c1)" />
+                        <text x="180" y="190" fill="#ef4444" font-size="8" font-weight="bold" text-anchor="middle">60.00% (3/5)</text>
+                        <!-- 白桑 -->
+                        <path d="M 240 193 L 240 210" fill="none" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow-yongjian-c1)" />
+                        <text x="240" y="190" fill="#ef4444" font-size="8" font-weight="bold" text-anchor="middle">66.67% (2/3)</text>
+
+                        <!-- 节点：CC & 菲菲 (第一层) -->
+                        <foreignObject x="75" y="5" width="50" height="60">
+                            <div xmlns="http://www.w3.org/1999/xhtml" class="flex flex-col items-center">
+                                <div class="vs-avatar border-2 border-blue-400 text-blue-600">C</div>
+                                <div class="text-[10px] font-bold text-blue-600 mt-1">CC</div>
+                            </div>
+                        </foreignObject>
+                        <foreignObject x="195" y="5" width="50" height="60">
+                            <div xmlns="http://www.w3.org/1999/xhtml" class="flex flex-col items-center">
+                                <div class="vs-avatar border-2 border-purple-400 text-purple-600">菲</div>
+                                <div class="text-[10px] font-bold text-purple-600 mt-1">菲菲</div>
+                            </div>
+                        </foreignObject>
+
+                        <!-- 节点：永健 (第二层中心) -->
+                        <foreignObject x="135" y="105" width="50" height="60">
+                            <div xmlns="http://www.w3.org/1999/xhtml" class="flex flex-col items-center">
+                                <div class="vs-avatar border-[3px] border-red-400 text-red-500 shadow-md">永</div>
+                                <div class="text-[10px] font-black text-red-500 mt-1">永健</div>
+                            </div>
+                        </foreignObject>
+
+                        <!-- 节点：4名受害者 (底层) -->
+                        <foreignObject x="35" y="215" width="50" height="60">
+                            <div xmlns="http://www.w3.org/1999/xhtml" class="flex flex-col items-center"><div class="vs-avatar-sm border border-emerald-200 text-emerald-600">晗</div><div class="text-[9px] font-bold text-emerald-600 mt-1">晗总</div></div>
+                        </foreignObject>
+                        <foreignObject x="95" y="215" width="50" height="60">
+                            <div xmlns="http://www.w3.org/1999/xhtml" class="flex flex-col items-center"><div class="vs-avatar-sm border border-amber-200 text-amber-600">金</div><div class="text-[9px] font-bold text-amber-600 mt-1">金平</div></div>
+                        </foreignObject>
+                        <foreignObject x="155" y="215" width="50" height="60">
+                            <div xmlns="http://www.w3.org/1999/xhtml" class="flex flex-col items-center"><div class="vs-avatar-sm border border-pink-200 text-pink-600">秋</div><div class="text-[9px] font-bold text-pink-600 mt-1">秋屿</div></div>
+                        </foreignObject>
+                        <foreignObject x="215" y="215" width="50" height="60">
+                            <div xmlns="http://www.w3.org/1999/xhtml" class="flex flex-col items-center"><div class="vs-avatar-sm border border-slate-200 text-slate-600">白</div><div class="text-[9px] font-bold text-slate-600 mt-1">白桑</div></div>
+                        </foreignObject>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- 链条 2：相爱相杀循环阵 (带概率的 SVG 连线) -->
+            <div class="bg-green-50/50 rounded-[2rem] p-5 border-2 border-green-100 card-shadow">
+                <div class="text-center mb-2">
+                    <h3 class="font-black text-green-500 text-sm tracking-widest uppercase">🔄 宿命的连环</h3>
+                    <p class="text-[10px] text-gray-400 mt-1">完美的克制闭环</p>
+                </div>
+                
+                <div class="relative w-full overflow-visible" style="padding-top: 65%;">
+                    <svg viewBox="0 0 320 220" class="absolute top-0 left-0 w-full h-full font-sans">
+                        <defs>
+                            <!-- 个人专属箭头标记 -->
+                            <marker id="arrow-feifei-c2" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+                                <path d="M 0 0 L 10 5 L 0 10 z" fill="#8b5cf6"/>
+                            </marker>
+                            <marker id="arrow-meimei-c2" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+                                <path d="M 0 0 L 10 5 L 0 10 z" fill="#ec4899"/>
+                            </marker>
+                            <marker id="arrow-hailin-c2" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+                                <path d="M 0 0 L 10 5 L 0 10 z" fill="#fb923c"/>
+                            </marker>
+                        </defs>
+
+                        <!-- 环状循环：菲菲 -> 妹妹 -> 海林 -> 菲菲 -->
+                        <path d="M 175 60 Q 210 80 230 110" fill="none" stroke="#c4b5fd" stroke-width="2.5" stroke-dasharray="4,3" marker-end="url(#arrow-feifei-c2)"/>
+                        <text x="195" y="80" fill="#8b5cf6" font-size="8" font-weight="bold">60%卡死(3/5次)</text>
+
+                        <path d="M 220 150 Q 175 160 135 150" fill="none" stroke="#fbcfe8" stroke-width="2.5" stroke-dasharray="4,3" marker-end="url(#arrow-meimei-c2)"/>
+                        <text x="160" y="165" fill="#ec4899" font-size="8" font-weight="bold">60%狙击(3/5次)</text>
+
+                        <path d="M 105 115 Q 110 80 145 65" fill="none" stroke="#fdba74" stroke-width="2.5" stroke-dasharray="4,3" marker-end="url(#arrow-hailin-c2)"/>
+                        <text x="110" y="85" fill="#fb923c" font-size="8" font-weight="bold">61.76%阻碍(21/34次)</text>
+
+                        <!-- 海林的额外分支：-> CC -->
+                        <path d="M 85 125 Q 50 90 35 70" fill="none" stroke="#fdba74" stroke-width="2" marker-end="url(#arrow-hailin-c2)"/>
+                        <text x="30" y="95" fill="#fb923c" font-size="7" font-weight="bold">52.00%波及(26/50次)</text>
+
+                        <!-- 节点区 -->
+                        <foreignObject x="135" y="15" width="50" height="60">
+                            <div xmlns="http://www.w3.org/1999/xhtml" class="flex flex-col items-center">
+                                <div class="vs-avatar border-2 border-purple-400 text-purple-600 text-sm">菲</div>
+                                <div class="text-[10px] font-bold text-purple-600 mt-1">菲菲</div>
+                            </div>
+                        </foreignObject>
+                        <foreignObject x="220" y="120" width="50" height="60">
+                            <div xmlns="http://www.w3.org/1999/xhtml" class="flex flex-col items-center">
+                                <div class="vs-avatar border-2 border-pink-400 text-pink-600 text-xs">妹妹</div>
+                                <div class="text-[10px] font-bold text-pink-600 mt-1">菲菲妹妹</div>
+                            </div>
+                        </foreignObject>
+                        <foreignObject x="80" y="120" width="50" height="60">
+                            <div xmlns="http://www.w3.org/1999/xhtml" class="flex flex-col items-center">
+                                <div class="vs-avatar border-2 border-orange-400 text-orange-600 text-sm">海</div>
+                                <div class="text-[10px] font-bold text-orange-600 mt-1">海林</div>
+                            </div>
+                        </foreignObject>
+                        <foreignObject x="10" y="35" width="40" height="50">
+                            <div xmlns="http://www.w3.org/1999/xhtml" class="flex flex-col items-center">
+                                <div class="vs-avatar-sm border-2 border-blue-400 text-blue-600">C</div>
+                                <div class="text-[9px] font-bold text-blue-600 mt-0.5">CC</div>
+                            </div>
+                        </foreignObject>
+                    </svg>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ✨ 我们的年度挚爱 -->
+    <div class="px-6 mt-14 mb-4">
+        <div class="text-center mb-6">
+            <h2 class="text-2xl font-black text-[#88d8b0]">💖 2025年度挚爱大赏</h2>
+            <p class="text-sm text-gray-500 mt-1">按大家投出的热爱票数排名，梦中情游揭晓！</p>
+        </div>
+            
+        <div class="space-y-4">
+            <!-- Top 1 -->
+            <!-- Top 1 -->
+            <div class="bg-white rounded-2xl p-4 border-[3px] border-[#88d8b0] shadow-lg relative overflow-hidden flex items-center gap-4">
+                <div class="absolute -left-5 -top-5 w-16 h-16 bg-[#88d8b0] rounded-br-full z-0"></div>
+                <div class="relative z-10 font-black text-white text-xl ml-1 mt-[-10px] drop-shadow-sm">1</div>
+                
+                <div class="text-4xl">🏭</div>
+                <div class="flex-1">
+                    <h4 class="font-black text-gray-800 text-lg leading-tight">工业革命：伯明翰</h4>
+                    <p class="text-[10px] text-gray-500 mb-2 font-bold mt-0.5 leading-relaxed">
+                        机制严谨工整，运营环环相扣，以极具深度的商业规划与资源流转，<br>
+                        构筑出德式桌游的巅峰设计，堪称策略桌游里的教科书级作品。
+                    </p>
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs font-black text-green-600 bg-green-100 px-2 py-0.5 rounded-full border border-green-200">3 票</span>
+                        <div class="flex -space-x-1.5">
+                            <div class="w-7 h-7 rounded-full bg-orange-100 border-2 border-white flex justify-center items-center text-[10px] font-black text-orange-600 shadow-sm" title="海林">海</div>
+                            <div class="w-7 h-7 rounded-full bg-green-100 border-2 border-white flex justify-center items-center text-[10px] font-black text-green-600 shadow-sm" title="秋屿">秋</div>
+                            <div class="w-7 h-7 rounded-full bg-blue-100 border-2 border-white flex justify-center items-center text-[10px] font-black text-blue-600 shadow-sm" title="CC">C</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top 2 & 3 -->
+            <div class="bg-white rounded-2xl p-4 border border-gray-200 card-shadow flex items-center gap-4 relative">
+                <div class="font-black text-gray-300 text-xl w-4 text-center">2</div>
+                <div class="text-3xl">🚂</div>
+                <div class="flex-1">
+                    <h4 class="font-bold text-gray-800 text-md">铁路环游传承：西部传奇</h4>
+                    <div class="flex items-center gap-2 mt-1.5">
+                        <span class="text-[10px] font-bold text-gray-500 bg-gray-100 px-1.5 py-0.5 rounded">2 票</span>
+                        <div class="flex -space-x-1">
+                            <div class="w-5 h-5 rounded-full bg-orange-100 border border-white flex justify-center items-center text-[9px] font-bold text-orange-600" title="海林">海</div>
+                            <div class="w-5 h-5 rounded-full bg-blue-100 border border-white flex justify-center items-center text-[9px] font-bold text-blue-600" title="菲菲">菲</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl p-4 border border-gray-200 card-shadow flex items-center gap-4 relative">
+                <div class="font-black text-gray-300 text-xl w-4 text-center">2</div>
+                <div class="text-3xl">🏝️</div>
+                <div class="flex-1">
+                    <h4 class="font-bold text-gray-800 text-md">波多黎各</h4>
+                    <div class="flex items-center gap-2 mt-1.5">
+                        <span class="text-[10px] font-bold text-gray-500 bg-gray-100 px-1.5 py-0.5 rounded">2 票</span>
+                        <div class="flex -space-x-1">
+                            <div class="w-5 h-5 rounded-full bg-orange-100 border border-white flex justify-center items-center text-[9px] font-bold text-orange-600" title="海林">海</div>
+                            <div class="w-5 h-5 rounded-full bg-yellow-100 border border-white flex justify-center items-center text-[9px] font-bold text-yellow-600" title="金平">金</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl p-4 border border-gray-200 card-shadow flex items-center gap-4 relative">
+                <div class="font-black text-gray-300 text-xl w-4 text-center">2</div>
+                <div class="text-3xl">💎</div>
+                <div class="flex-1">
+                    <h4 class="font-bold text-gray-800 text-md">璀璨宝石</h4>
+                    <div class="flex items-center gap-2 mt-1.5">
+                        <span class="text-[10px] font-bold text-gray-500 bg-gray-100 px-1.5 py-0.5 rounded">2 票</span>
+                        <div class="flex -space-x-1">
+                            <div class="w-5 h-5 rounded-full bg-blue-100 border border-white flex justify-center items-center text-[9px] font-bold text-blue-600" title="菲菲">菲</div>
+                            <div class="w-5 h-5 rounded-full bg-slate-100 border border-white flex justify-center items-center text-[9px] font-bold text-slate-600" title="夏伟">夏</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl p-4 border border-gray-200 card-shadow flex items-center gap-4 relative">
+                <div class="font-black text-gray-300 text-xl w-4 text-center">2</div>
+                <div class="text-3xl">🦄</div>
+                <div class="flex-1">
+                    <h4 class="font-bold text-gray-800 text-md">永恒之谷</h4>
+                    <div class="flex items-center gap-2 mt-1.5">
+                        <span class="text-[10px] font-bold text-gray-500 bg-gray-100 px-1.5 py-0.5 rounded">2 票</span>
+                        <div class="flex -space-x-1">
+                            <div class="w-5 h-5 rounded-full bg-red-100 border border-white flex justify-center items-center text-[9px] font-bold text-red-600" title="永健">永</div>
+                            <div class="w-5 h-5 rounded-full bg-gray-200 border border-white flex justify-center items-center text-[9px] font-bold text-gray-600" title="牢弟">牢</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 其它 1 票热爱 -->
+            <div class="grid grid-cols-2 gap-3 mt-2">
+                <div class="bg-white rounded-xl p-3 border border-gray-100 shadow-sm flex flex-col items-center text-center">
+                    <span class="text-2xl mb-1">🌸</span><span class="font-bold text-gray-700 text-xs">破产边缘动画社</span>
+                    <div class="text-[9px] text-gray-400 mt-1"><span class="bg-pink-50 text-pink-500 px-1 rounded">白桑</span> 挚爱</div>
+                </div>
+                <div class="bg-white rounded-xl p-3 border border-gray-100 shadow-sm flex flex-col items-center text-center">
+                    <span class="text-2xl mb-1">🕊️</span><span class="font-bold text-gray-700 text-xs">展翅翱翔</span>
+                    <div class="text-[9px] text-gray-400 mt-1"><span class="bg-purple-50 text-purple-500 px-1 rounded">菲菲妹妹</span> 挚爱</div>
+                </div>
+                <div class="bg-white rounded-xl p-3 border border-gray-100 shadow-sm flex flex-col items-center text-center">
+                    <span class="text-2xl mb-1">🌲</span><span class="font-bold text-gray-700 text-xs">森森不息</span>
+                    <div class="text-[9px] text-gray-400 mt-1"><span class="bg-indigo-50 text-indigo-500 px-1 rounded">天宇哥哥</span> 挚爱</div>
+                </div>
+                <div class="bg-white rounded-xl p-3 border border-gray-100 shadow-sm flex flex-col items-center text-center">
+                    <span class="text-2xl mb-1">🏢</span><span class="font-bold text-gray-700 text-xs">新创公司</span>
+                    <div class="text-[9px] text-gray-400 mt-1"><span class="bg-yellow-50 text-yellow-600 px-1 rounded">金平</span> 挚爱</div>
+                </div>
+                <div class="bg-white rounded-xl p-3 border border-gray-100 shadow-sm flex flex-col items-center text-center">
+                    <span class="text-2xl mb-1">🐵</span><span class="font-bold text-gray-700 text-xs">方舟动物园</span>
+                    <div class="text-[9px] text-gray-400 mt-1"><span class="bg-emerald-50 text-emerald-500 px-1 rounded">靓姐</span> 挚爱</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="mt-8 px-8 text-center bg-gray-50 py-10 border-t border-dashed border-gray-300">
+        <p class="text-gray-700 font-black text-lg mb-2">感谢每一位来到桌边的你 ❤️</p>
+        <p class="text-xs text-gray-500 leading-relaxed max-w-sm mx-auto">
+            排名、分数、甚至被卡到破防，都只是游戏的一部分。<br>
+            真正珍贵的是那些欢呼拍桌子的夜晚，和一直陪伴在桌边的你们。
+        </p>
+        <div class="mt-6 flex justify-center space-x-3 text-3xl">
+            <span class="rolling cursor-pointer">🥂</span>
+            <span class="rolling cursor-pointer" style="animation-delay: 0.1s;">🍕</span>
+            <span class="rolling cursor-pointer" style="animation-delay: 0.2s;">🍟</span>
+            <span class="rolling cursor-pointer" style="animation-delay: 0.3s;">🎉</span>
+        </div>
+        <p class="text-[10px] text-gray-300 mt-8 tracking-[0.2em] uppercase font-bold">Bye 2025, Hello 2026</p>
+    </div>
+
+</div>
+
+</body>
+</html>
